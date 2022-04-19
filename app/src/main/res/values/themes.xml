@@ -34,6 +34,13 @@
 
     <style name="Owl" parent="@style/Base.TechHub"/>
 
+    <style name="Owl.Light">
+        <item name="colorPrimary">@color/white</item>
+        <item name="colorPrimaryVariant">@color/anti_flash_white</item>
+        <item name="colorSecondary">@color/black</item>
+        <item name="colorSecondaryVariant">@color/matte_black</item>
+    </style>
+
     <style name="Owl.Yellow">
         <item name="colorPrimary">@color/owl_yellow_500</item>
         <item name="colorPrimaryVariant">@color/owl_yellow_400</item>
@@ -67,6 +74,13 @@
     <style name="Owl.Pink">
         <item name="colorPrimary">@color/owl_pink_500</item>
         <item name="colorSecondary">@color/owl_pink_500</item>
+        <item name="colorPrimaryVariant">@color/owl_pink_600</item>
+        <item name="colorOnPrimary">#000</item>
+    </style>
+
+    <style name="Owl.Pink.Variant">
+        <item name="colorPrimary">@color/owl_pink_500</item>
+        <item name="colorSecondary">@color/owl_yellow_400</item>
         <item name="colorPrimaryVariant">@color/owl_pink_600</item>
         <item name="colorOnPrimary">#000</item>
     </style>

@@ -8,34 +8,33 @@
         android:layout_height="match_parent"
         android:background="?attr/colorPrimarySurface"
         android:clipChildren="false"
-        android:theme="@style/Owl.Yellow"
+        android:theme="@style/Owl.Pink.Variant"
         app:paddingTopSystemWindowInsets="@{true}"
         tools:context=".ui.onboarding.OnboardingFragment"
         tools:targetApi="o">
 
         <ImageView
             android:id="@+id/lockup"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/grid_2"
+            android:layout_width="200dp"
+            android:layout_height="250dp"
+            android:layout_marginStart="-20dp"
+            android:layout_marginTop="-50dp"
             android:importantForAccessibility="no"
-            android:paddingTop="@dimen/margin_high"
             app:layout_constraintBottom_toTopOf="@id/choose"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="spread_inside"
             app:marginLeftSystemWindowInsets="@{true}"
-            app:srcCompat="@drawable/ic_theme_1_lockup" />
+            android:src="@drawable/ic_theme_1_lockup" />
 
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/grid_2"
+            android:layout_marginHorizontal="@dimen/grid_2"
             android:background="?attr/selectableItemBackgroundBorderless"
             android:clickable="true"
             android:contentDescription="@string/settings"
             android:focusable="true"
-            android:paddingTop="@dimen/margin_high"
             app:layout_constraintBottom_toBottomOf="@id/lockup"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/lockup"
