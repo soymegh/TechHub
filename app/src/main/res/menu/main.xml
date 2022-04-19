@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/myCourses"
+        android:title="@string/my_courses"
+        android:icon="@drawable/asl_my_courses"/>
+
+    <item
+        android:id="@+id/featured"
+        android:title="@string/featured"
+        android:icon="@drawable/asl_featured"/>
+
+    <item
+        android:id="@+id/search"
+        android:title="@string/search"
+        android:icon="@drawable/asl_search"/>
+
+</menu>

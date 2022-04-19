@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <drawable name="ic_theme_1_lockup">@drawable/ic_lockup_white</drawable>
+</resources>
