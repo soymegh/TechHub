@@ -29,11 +29,12 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#B00020</color>
+    <color name="royal_blue">#1964E2</color>
 
     <!-- Miscellaneous Colors-->
     <color name="gradient_start">#f37335</color>
     <color name="colorPrimaryDark">#140078</color>
-    <color name="colorAccent">#8559da</color>
+    <color name="owl_purple_400">#8559da</color>
     <color name="gradient_stop">#FDC830</color>
     <color name="deep_yellow">#FFF323</color>
     <color name="yellow">#FFCA03</color>

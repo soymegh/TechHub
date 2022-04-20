@@ -22,6 +22,7 @@ buildscript {
         lottie = "5.0.3"
         glide = "4.13.1"
         dynamic_animation = "1.0.0"
+        splash_screen = "1.0.0-beta02"
     }
     dependencies {
         classpath "androidx.navigation:navigation-safe-args-gradle-plugin:$navigation"

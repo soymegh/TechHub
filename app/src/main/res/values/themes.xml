@@ -29,7 +29,6 @@
 
         <!--Default styles-->
         <item name="bottomNavigationStyle">@style/Widget.Owl.BottomNavigationView</item>
-
     </style>
 
     <style name="Owl" parent="@style/Base.TechHub"/>
@@ -80,9 +79,9 @@
 
     <style name="Owl.Pink.Variant">
         <item name="colorPrimary">@color/owl_pink_500</item>
-        <item name="colorSecondary">@color/owl_yellow_400</item>
+        <item name="colorSecondary">@color/owl_blue_700</item>
         <item name="colorPrimaryVariant">@color/owl_pink_600</item>
-        <item name="colorOnPrimary">#000</item>
+        <item name="colorOnPrimary">#fff</item>
     </style>
 
     <style name="ThemeOverlay.Owl.TransitionShapeAppearance.Small" parent="">

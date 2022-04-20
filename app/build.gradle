@@ -95,4 +95,7 @@ dependencies {
     // Dynamic Animation
     implementation "androidx.dynamicanimation:dynamicanimation:$dynamic_animation"
 
+    // Splash Screen API
+    implementation "androidx.core:core-splashscreen:$splash_screen"
+
 }
