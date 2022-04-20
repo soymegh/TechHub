@@ -66,14 +66,15 @@
             android:orientation="horizontal"
             android:paddingHorizontal="@dimen/grid_1"
             app:hasFixedSize="@{true}"
+            android:layout_marginTop="@dimen/margin_standard"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-            app:layout_constraintBottom_toTopOf="@id/fab"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/choose"
             app:paddingLeftSystemWindowInsets="@{true}"
             app:paddingRightSystemWindowInsets="@{true}"
             app:reverseLayout="true"
+            tools:listitem="@layout/onboarding_topic_item"
             app:spanCount="@integer/onboarding_topics_rows" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -83,7 +84,6 @@
             android:layout_margin="@dimen/grid_2"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/topic_grid"
             app:marginBottomSystemWindowInsets="@{true}"
             app:marginRightSystemWindowInsets="@{true}"
             app:srcCompat="@drawable/ic_compass"

@@ -29,8 +29,7 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="red">#B00020</color>
-    <color name="royal_blue">#1964E2</color>
-
+    <color name="royal_blue">#0064E2</color>
     <!-- Miscellaneous Colors-->
     <color name="gradient_start">#f37335</color>
     <color name="colorPrimaryDark">#140078</color>

@@ -13,8 +13,9 @@
     <dimen name="divider_height">1dp</dimen>
 
     <integer name="featured_grid_columns">2</integer>
-    <integer name="onboarding_topics_rows">2</integer>
-    <dimen name="onboarding_topics_height">160dp</dimen>
+    <integer name="onboarding_topics_rows">3</integer>
+    <dimen name="onboarding_topics_height">210dp</dimen>
     <dimen name="margin_high">32dp</dimen>
+    <dimen name="margin_standard">16dp</dimen>
 
 </resources>
