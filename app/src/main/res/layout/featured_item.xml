@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:ignore="RtlSymmetry"
+    tools:targetApi="o">
+
+    <data>
+
+        <variable
+            name="course"
+            type="com.jonareas.android.techhub.common.data.cache.model.CachedCourse" />
+
+        <variable
+            name="clickHandler"
+            type="com.jonareas.android.techhub.ui.explore.CourseViewClick" />
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/featured_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/grid_0_5"
+        android:foreground="?attr/selectableItemBackground"
+        android:onClick="@{(v) -> clickHandler.onClick(v, course.id)}"
+        android:transitionName="@{course.name}"
+        app:elevationOverlay="@{@dimen/card_elevation}">
+
+        <ImageView
+            android:id="@+id/course_image"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@{course.thumbContentDesc}"
+            android:scaleType="centerCrop"
+            app:layout_constraintDimensionRatio="4:3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:placeholder="@{@drawable/course_image_placeholder}"
+            app:srcUrl="@{course.thumbUrl}" />
+
+        <ImageView
+            android:id="@+id/course_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/add_course"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_add"
+            tools:ignore="ImageContrastCheck" />
+
+        <ImageView
+            android:id="@+id/course_instructor"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:foreground="@drawable/avatar_outline"
+            android:importantForAccessibility="no"
+            app:circleCrop="@{true}"
+            app:layout_constraintBottom_toBottomOf="@id/course_image"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/course_image"
+            app:placeholder="@{@drawable/ic_avatar_placeholder}"
+            app:srcUrl="@{course.instructor}"
+ />
+
+        <TextView
+            android:id="@+id/course_subject"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/grid_2"
+            android:text="@{course.subject}"
+            android:textAllCaps="true"
+            android:textAppearance="?attr/textAppearanceOverline"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/course_instructor" />
+
+        <TextView
+            android:id="@+id/course_name"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:paddingHorizontal="@dimen/grid_2"
+            android:text="@{course.name}"
+            android:textAppearance="?attr/textAppearanceSubtitle1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/course_subject" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.5" />
+
+        <ImageView
+            android:id="@+id/course_icon"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:importantForAccessibility="no"
+            app:layout_constraintBottom_toBottomOf="@id/course_steps"
+            app:layout_constraintEnd_toStartOf="@id/guideline"
+            app:layout_constraintTop_toTopOf="@id/course_steps"
+            app:srcCompat="@drawable/ic_course"
+            app:tint="?attr/colorPrimary" />
+
+        <TextView
+            android:id="@+id/course_steps"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingVertical="@dimen/grid_3"
+            android:paddingStart="@dimen/grid_0_5"
+            android:text="@{String.valueOf(course.steps)}"
+            android:textAppearance="?attr/textAppearanceSubtitle2"
+            android:textColor="?attr/colorPrimary"
+            app:layout_constraintStart_toEndOf="@id/guideline"
+            app:layout_constraintTop_toBottomOf="@id/course_name" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>

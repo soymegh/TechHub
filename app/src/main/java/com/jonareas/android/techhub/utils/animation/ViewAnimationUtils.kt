@@ -2,16 +2,18 @@ package com.jonareas.android.techhub.utils.animation
 
 import android.animation.ObjectAnimator
 import android.view.View
+import android.view.ViewAnimationUtils
 import android.view.animation.BounceInterpolator
 import androidx.annotation.IdRes
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen
+import androidx.core.view.doOnLayout
 import androidx.dynamicanimation.animation.DynamicAnimation
 import androidx.dynamicanimation.animation.DynamicAnimation.ViewProperty
 import androidx.dynamicanimation.animation.SpringAnimation
 import androidx.dynamicanimation.animation.SpringForce
 import com.jonareas.android.techhub.R
-import com.jonareas.android.techhub.utils.defaultAnimationDuration
+import com.jonareas.android.techhub.utils.DEFAULT_ANIMATION_DURATION
 
 fun SplashScreen.slideUpOnExit() =
     this.setOnExitAnimationListener {
@@ -24,18 +26,22 @@ fun SplashScreen.slideUpOnExit() =
             -splashScreenView.height.toFloat(),
         )
         slideUp.interpolator = BounceInterpolator()
-        slideUp.duration = defaultAnimationDuration
+        slideUp.duration = DEFAULT_ANIMATION_DURATION
         slideUp.doOnEnd {
             splashScreenViewProvider.remove()
         }
         slideUp.start()
     }
 
+fun View.startCircularRevealFromBottomRight() : Unit = doOnLayout {
 
-/**
- * An extension function which creates/retrieves a [SpringAnimation] and stores it in the [View]s
- * tag.
- */
+    ViewAnimationUtils
+        .createCircularReveal(it, right, bottom, 0f, height.toFloat() * 1.5f)
+        .apply { duration = DEFAULT_ANIMATION_DURATION }
+        .start()
+}
+
+
 fun View.spring(
     property: DynamicAnimation.ViewProperty,
     stiffness: Float = 200f,
@@ -81,23 +87,4 @@ private fun getKey(property: ViewProperty): Int {
     }
 }
 
-/**
- * Changes the visibility of a [View] to visible on screen; the default value.
- */
-fun View.visible() {
-    this.visibility = View.VISIBLE
-}
-
-/**
- * Changes the visibility of a [View] to be completely hidden, as if the view had not been added.
- */
-fun View.gone() {
-    this.visibility = View.GONE
-}
-/**
- * Changes the visibility of a [View] to not displayed, but taken into account during layout (space is left for it).
- */
-fun View.invisible() {
-    this.visibility = View.INVISIBLE
-}
 

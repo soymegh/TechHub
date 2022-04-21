@@ -9,13 +9,13 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.databinding.ActivityMainBinding
-import com.jonareas.android.techhub.utils.animation.gone
 import com.jonareas.android.techhub.utils.animation.slideUpOnExit
-import com.jonareas.android.techhub.utils.animation.visible
+import com.jonareas.android.techhub.utils.gone
+import com.jonareas.android.techhub.utils.visible
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var binding: ActivityMainBinding
+    internal lateinit var binding: ActivityMainBinding private set
     private val topLevelDestinations = setOf(R.id.exploreCoursesFragment,
         R.id.myCoursesFragment,
         R.id.searchCoursesFragment)

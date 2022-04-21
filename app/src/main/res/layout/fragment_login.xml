@@ -10,7 +10,7 @@
         android:clipChildren="false"
         android:theme="@style/Owl.Pink.Variant"
         app:paddingTopSystemWindowInsets="@{true}"
-        tools:context=".ui.onboarding.OnboardingFragment"
+        tools:context=".ui.login.OnboardingFragment"
         tools:targetApi="o">
 
         <ImageView
@@ -48,7 +48,10 @@
             android:layout_marginStart="@dimen/grid_4"
             android:gravity="end"
             android:padding="@dimen/grid_2"
+            android:textColor="?attr/colorOnSurface"
+            android:textStyle="bold"
             android:text="@string/choose_topics_that_interest_you"
+            android:fontFamily="@font/rubik_medium"
             android:textAppearance="?attr/textAppearanceHeadline4"
             app:layout_constraintBottom_toTopOf="@id/topic_grid"
             app:layout_constraintEnd_toEndOf="parent"

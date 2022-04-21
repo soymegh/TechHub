@@ -1,4 +1,4 @@
-package com.jonareas.android.techhub.ui.onboarding
+package com.jonareas.android.techhub.ui.login
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,17 +8,17 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.common.data.provider.Topics.topics
-import com.jonareas.android.techhub.databinding.FragmentOnBoardingBinding
+import com.jonareas.android.techhub.databinding.FragmentLoginBinding
 import com.jonareas.android.techhub.utils.animation.OscillatingScrollListener
 import com.jonareas.android.techhub.utils.animation.smoothScrollToPositionWithSpeed
 
 /**
  * Onboarding [Fragment] which displays a list of Topics for a signed-in user to select.
  */
-class OnBoardingFragment : Fragment() {
+class LoginFragment : Fragment() {
 
-    private var _binding: FragmentOnBoardingBinding? = null
-    private val binding: FragmentOnBoardingBinding
+    private var _binding: FragmentLoginBinding? = null
+    private val binding: FragmentLoginBinding
         get() = _binding!!
 
     override fun onCreateView(
@@ -26,7 +26,7 @@ class OnBoardingFragment : Fragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
-        _binding = FragmentOnBoardingBinding.inflate(inflater, container, false).apply {
+        _binding = FragmentLoginBinding.inflate(inflater, container, false).apply {
             topicGrid.apply {
                 adapter = TopicsAdapter(context).apply {
                     // We're setting reverseLayout on the RV to layout from RTL, but we still want
@@ -49,7 +49,7 @@ class OnBoardingFragment : Fragment() {
 
     private fun setupListeners() : Unit = binding.run {
         buttonContinue.setOnClickListener {
-            findNavController().navigate(OnBoardingFragmentDirections.closeOnBoarding())
+            findNavController().navigate(LoginFragmentDirections.closeLogin())
         }
     }
 

@@ -1,4 +1,4 @@
-package com.jonareas.android.techhub.ui.onboarding
+package com.jonareas.android.techhub.ui.login
 
 import android.content.Context
 import android.graphics.drawable.Drawable
@@ -11,20 +11,20 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.jonareas.android.techhub.R
-import com.jonareas.android.techhub.common.data.cache.model.Topic
+import com.jonareas.android.techhub.common.data.cache.model.CachedTopic
 import com.jonareas.android.techhub.databinding.OnboardingTopicItemBinding
 import com.jonareas.android.techhub.utils.animation.TopicThumbnailTarget
 
-class TopicsAdapter(context: Context) : ListAdapter<Topic, TopicsViewHolder>(TopicDiff) {
+class TopicsAdapter(context: Context) : ListAdapter<CachedTopic, TopicsViewHolder>(TopicDiff) {
 
     private val selectedTint = context.getColor(R.color.topic_tint)
     private val selectedTopLeftCornerRadius =
         context.resources.getDimensionPixelSize(R.dimen.small_component_top_left_radius)
     private val selectedDrawable = context.getDrawable(R.drawable.ic_checkmark)!!
 
-    private companion object TopicDiff : DiffUtil.ItemCallback<Topic>() {
-        override fun areItemsTheSame(oldItem: Topic, newItem: Topic) = oldItem.name == newItem.name
-        override fun areContentsTheSame(oldItem: Topic, newItem: Topic) = oldItem == newItem
+    private companion object TopicDiff : DiffUtil.ItemCallback<CachedTopic>() {
+        override fun areItemsTheSame(oldItem: CachedTopic, newItem: CachedTopic) = oldItem.name == newItem.name
+        override fun areContentsTheSame(oldItem: CachedTopic, newItem: CachedTopic) = oldItem == newItem
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): TopicsViewHolder {
@@ -55,7 +55,7 @@ class TopicsViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
 
     fun bind(
-        topic: Topic,
+        topic: CachedTopic,
         @ColorInt selectedTint: Int,
         @Px selectedTopLeftCornerRadius: Int,
         selectedDrawable: Drawable

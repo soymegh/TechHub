@@ -3,23 +3,25 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/onBoardingFragment">
+    app:startDestination="@id/loginFragment">
 
     <fragment
-        android:id="@+id/onBoardingFragment"
-        android:name="com.jonareas.android.techhub.ui.onboarding.OnBoardingFragment"
+        android:id="@+id/loginFragment"
+        android:name="com.jonareas.android.techhub.ui.login.LoginFragment"
         android:label="OnBoardingFragment"
-        tools:layout="@layout/fragment_on_boarding"
+        tools:layout="@layout/fragment_login"
         >
         <action
-            android:id="@+id/close_on_boarding"
-            app:destination="@id/exploreCoursesFragment" />
+            android:id="@+id/close_login"
+            app:destination="@id/exploreCoursesFragment"
+            app:enterAnim="@anim/slide_in_up" />
     </fragment>
     <fragment
         android:id="@+id/exploreCoursesFragment"
         android:name="com.jonareas.android.techhub.ui.explore.ExploreCoursesFragment"
         android:label="fragment_all_courses"
-        tools:layout="@layout/fragment_explore_courses" />
+        tools:layout="@layout/fragment_explore_courses" >
+    </fragment>
     <fragment
         android:id="@+id/myCoursesFragment"
         android:name="com.jonareas.android.techhub.ui.courses.MyCoursesFragment"
