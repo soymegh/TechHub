@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
 
     <item
-        android:id="@+id/myCourses"
+        android:id="@+id/myCoursesFragment"
         android:title="@string/my_courses"
         android:icon="@drawable/asl_my_courses"/>
 
     <item
-        android:id="@+id/featured"
-        android:title="@string/featured"
+        android:id="@+id/exploreCoursesFragment"
+        android:title="@string/all"
         android:icon="@drawable/asl_featured"/>
 
     <item
-        android:id="@+id/search"
+        android:id="@+id/searchCoursesFragment"
         android:title="@string/search"
         android:icon="@drawable/asl_search"/>
 

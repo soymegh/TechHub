@@ -1,4 +1,4 @@
-package com.jonareas.android.techhub.utils
+package com.jonareas.android.techhub.utils.animation
 
 import android.util.DisplayMetrics
 import androidx.annotation.Px

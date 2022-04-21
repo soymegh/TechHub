@@ -78,7 +78,7 @@
             app:spanCount="@integer/onboarding_topics_rows" />
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/fab"
+            android:id="@+id/button_continue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="@dimen/grid_2"

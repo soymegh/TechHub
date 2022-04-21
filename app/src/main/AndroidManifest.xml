@@ -3,9 +3,10 @@
     package="com.jonareas.android.techhub">
 
     <!-- Load data from the remote server -->
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".TechHubApp"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -13,9 +14,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.TechHub.Splash">
         <activity
-            android:name=".MainActivity"
-            android:theme="@style/Theme.TechHub.Splash"
-            android:exported="true">
+            android:name=".ui.MainActivity"
+            android:exported="true"
+            android:theme="@style/Theme.TechHub.Splash">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

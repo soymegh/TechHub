@@ -5,11 +5,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.common.data.provider.Topics.topics
 import com.jonareas.android.techhub.databinding.FragmentOnBoardingBinding
-import com.jonareas.android.techhub.utils.OscillatingScrollListener
-import com.jonareas.android.techhub.utils.smoothScrollToPositionWithSpeed
+import com.jonareas.android.techhub.utils.animation.OscillatingScrollListener
+import com.jonareas.android.techhub.utils.animation.smoothScrollToPositionWithSpeed
 
 /**
  * Onboarding [Fragment] which displays a list of Topics for a signed-in user to select.
@@ -39,6 +40,17 @@ class OnBoardingFragment : Fragment() {
             }
         }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupListeners()
+    }
+
+    private fun setupListeners() : Unit = binding.run {
+        buttonContinue.setOnClickListener {
+            findNavController().navigate(OnBoardingFragmentDirections.closeOnBoarding())
+        }
     }
 
     override fun onDestroyView() {

@@ -1,4 +1,4 @@
-package com.jonareas.android.techhub.utils
+package com.jonareas.android.techhub.utils.animation
 
 import android.animation.ObjectAnimator
 import android.view.View
@@ -11,6 +11,7 @@ import androidx.dynamicanimation.animation.DynamicAnimation.ViewProperty
 import androidx.dynamicanimation.animation.SpringAnimation
 import androidx.dynamicanimation.animation.SpringForce
 import com.jonareas.android.techhub.R
+import com.jonareas.android.techhub.utils.defaultAnimationDuration
 
 fun SplashScreen.slideUpOnExit() =
     this.setOnExitAnimationListener {
@@ -23,12 +24,13 @@ fun SplashScreen.slideUpOnExit() =
             -splashScreenView.height.toFloat(),
         )
         slideUp.interpolator = BounceInterpolator()
-        slideUp.duration = 1000L
+        slideUp.duration = defaultAnimationDuration
         slideUp.doOnEnd {
             splashScreenViewProvider.remove()
         }
         slideUp.start()
     }
+
 
 /**
  * An extension function which creates/retrieves a [SpringAnimation] and stores it in the [View]s
@@ -79,15 +81,22 @@ private fun getKey(property: ViewProperty): Int {
     }
 }
 
-
+/**
+ * Changes the visibility of a [View] to visible on screen; the default value.
+ */
 fun View.visible() {
     this.visibility = View.VISIBLE
 }
 
+/**
+ * Changes the visibility of a [View] to be completely hidden, as if the view had not been added.
+ */
 fun View.gone() {
     this.visibility = View.GONE
 }
-
+/**
+ * Changes the visibility of a [View] to not displayed, but taken into account during layout (space is left for it).
+ */
 fun View.invisible() {
     this.visibility = View.INVISIBLE
 }

@@ -16,4 +16,5 @@
     <string name="pause_video">Pause Video</string>
     <string name="play_video">Play video</string>
     <string name="step_num">Step %1$d</string>
+    <string name="all">All</string>
 </resources>
