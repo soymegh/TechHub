@@ -15,13 +15,18 @@ class ExploreCoursesFragment : Fragment() {
     private var _binding : FragmentExploreCoursesBinding? = null
     private val binding : FragmentExploreCoursesBinding
         get() = _binding!!
-    
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentExploreCoursesBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
     }
 
 }
