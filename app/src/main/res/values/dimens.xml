@@ -18,4 +18,10 @@
     <dimen name="margin_high">32dp</dimen>
     <dimen name="margin_standard">16dp</dimen>
 
+    <dimen name="onboarding_bubble_item_size">380dp</dimen>
+    <dimen name="onboarding_bubble_item_size_xlarge">380dp</dimen>
+    <dimen name="onboarding_bubble_item_size_large">100dp</dimen>
+    <dimen name="onboarding_bubble_item_size_medium">90dp</dimen>
+    <dimen name="onboarding_bubble_item_size_small">60dp</dimen>
+
 </resources>

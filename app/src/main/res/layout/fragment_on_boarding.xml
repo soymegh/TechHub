@@ -1,97 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#A5E1D2">
+
+    <include
+        android:id="@+id/on_boarding_motion_layout"
+        layout="@layout/onboading_motion_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:background="?attr/colorPrimarySurface"
-        android:clipChildren="false"
-        android:theme="@style/Owl.Pink.Variant"
-        app:paddingTopSystemWindowInsets="@{true}"
-        tools:context=".ui.onboarding.OnboardingFragment"
-        tools:targetApi="o">
-
-        <ImageView
-            android:id="@+id/lockup"
-            android:layout_width="200dp"
-            android:layout_height="250dp"
-            android:layout_marginStart="-20dp"
-            android:layout_marginTop="-50dp"
-            android:importantForAccessibility="no"
-            app:layout_constraintBottom_toTopOf="@id/choose"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_chainStyle="spread_inside"
-            app:marginLeftSystemWindowInsets="@{true}"
-            android:src="@drawable/ic_theme_1_lockup" />
-
-        <ImageView
+        android:layout_height="48dp"
+        android:id="@+id/navContainer"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+        <Button
+            android:id="@+id/next"
+            style="?android:attr/borderlessButtonStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="@dimen/grid_2"
-            android:background="?attr/selectableItemBackgroundBorderless"
-            android:clickable="true"
-            android:contentDescription="@string/settings"
-            android:focusable="true"
-            app:layout_constraintBottom_toBottomOf="@id/lockup"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/lockup"
-            app:marginRightSystemWindowInsets="@{true}"
-            app:srcCompat="@drawable/ic_gear" />
-
-        <TextView
-            android:id="@+id/choose"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="@dimen/grid_4"
-            android:gravity="end"
-            android:padding="@dimen/grid_2"
-            android:textColor="?attr/colorOnSurface"
-            android:textStyle="bold"
-            android:text="@string/choose_topics_that_interest_you"
-            android:fontFamily="@font/rubik_medium"
-            android:textAppearance="?attr/textAppearanceHeadline4"
-            app:layout_constraintBottom_toTopOf="@id/topic_grid"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lockup"
-            app:marginLeftSystemWindowInsets="@{true}"
-            app:marginRightSystemWindowInsets="@{true}" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/topic_grid"
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/onboarding_topics_height"
-            android:clipChildren="false"
-            android:clipToPadding="false"
-            android:orientation="horizontal"
-            android:paddingHorizontal="@dimen/grid_1"
-            app:hasFixedSize="@{true}"
-            android:layout_marginTop="@dimen/margin_standard"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/choose"
-            app:paddingLeftSystemWindowInsets="@{true}"
-            app:paddingRightSystemWindowInsets="@{true}"
-            app:reverseLayout="true"
-            tools:listitem="@layout/onboarding_topic_item"
-            app:spanCount="@integer/onboarding_topics_rows" />
-
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/button_continue"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_margin="@dimen/grid_2"
+            android:gravity="center"
+            android:text="@string/button_text_next"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="false"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:marginBottomSystemWindowInsets="@{true}"
-            app:marginRightSystemWindowInsets="@{true}"
-            app:srcCompat="@drawable/ic_compass"
-            app:tint="?attr/colorOnPrimary" />
+            app:layout_constraintRight_toRightOf="parent" />
 
+        <LinearLayout
+            android:id="@+id/indicatorsContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:orientation="horizontal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+        <Button
+            android:id="@+id/previous"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/button_text_previous"
+            android:textColor="@color/colorAccent"
+            android:textAllCaps="false"
+            android:visibility="invisible"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent" />
     </androidx.constraintlayout.widget.ConstraintLayout>
-
-</layout>
+</androidx.constraintlayout.widget.ConstraintLayout>

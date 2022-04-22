@@ -1,10 +1,28 @@
 <resources>
     <string name="app_name">TechHub</string>
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <!--On Boarding Strings -->
+    <string name="heading_text">Neque porro quisquam est qui</string>
+
+    <string name="first_bubble_description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer dolor purus\n</string>
+    <string name="first_bubble_title">Lorem ipsum</string>
+
+    <string name="second_bubble_title">Ut at urna </string>
+    <string name="second_bubble_description">Ut at urna non nibh viverra consequat. In a nibh a elit feugiat sagittis.\n</string>
+
+    <string name="third_bubble_title">Aliquam vel dolor</string>
+    <string name="third_bubble_description">- aliquam vel dolor justo. Quisque posuere mollis turpis, eget scelerisque risus maximus vitae.</string>
+    <string name="onboaring_with_motionlayout">Onboaring with MotionLayout</string>
+
+    <string name="button_text_complete">Complete</string>
+    <string name="button_text_next">Next</string>
+    <string name="button_text_previous">Previous</string>
+
     <string name="course_steps">%1$s / %2$s</string>
     <string name="add_course">Add Course</string>
     <string name="account">Account</string>
     <string name="search_owl">Search Owl</string>
+
     <string name="choose_topics_that_interest_you">Choose topics you want to learn</string>
     <string name="settings">settings</string>
     <string name="my_courses">My Courses</string>
@@ -17,4 +35,5 @@
     <string name="play_video">Play video</string>
     <string name="step_num">Step %1$d</string>
     <string name="all">All</string>
+    <string name="learn_from_the_best">Learn from the very top experts</string>
 </resources>

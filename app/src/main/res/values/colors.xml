@@ -19,6 +19,18 @@
     <!--background protection for nav-bar, varied on Q+-->
     <color name="immersive_sys_ui">#33000000</color>
     <color name="nav_bar">@color/immersive_sys_ui</color>
+    <!--On Boarding Palette Q+-->
+    <color name="colorAccent">#14555A</color>
+
+    <color name="onboarding_background">#A5E1D2</color>
+
+    <color name="color_onboarding_page1">#008484</color>
+    <color name="color_onboarding_page2">@color/colorAccent</color>
+    <color name="color_onboarding_page3">#EBFFFA</color>
+
+    <color name="text_color_onboarding_page1">#fff</color>
+    <color name="text_color_onboarding_page2">#EBFFFA   </color>
+    <color name="text_color_onboarding_page3">@color/colorAccent</color>
 
     <!--Android Default palette colors-->
     <color name="purple_200">#FFBB86FC</color>

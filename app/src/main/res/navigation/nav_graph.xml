@@ -11,10 +11,11 @@
         android:label="OnBoardingFragment"
         tools:layout="@layout/fragment_on_boarding"
         >
+
         <action
             android:id="@+id/close_on_boarding"
-            app:destination="@id/exploreCoursesFragment"
-            app:enterAnim="@anim/slide_in_up" />
+            app:destination="@id/loginFragment"
+             />
     </fragment>
     <fragment
         android:id="@+id/exploreCoursesFragment"
@@ -32,6 +33,17 @@
         android:name="com.jonareas.android.techhub.ui.search.SearchCoursesFragment"
         android:label="fragment_search_courses"
         tools:layout="@layout/fragment_search_courses" />
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.jonareas.android.techhub.ui.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login"
+        >
+        <action
+            android:id="@+id/close_login"
+            app:destination="@id/exploreCoursesFragment"
+            app:enterAnim="@anim/slide_in_up" />
+    </fragment>
 
 
 </navigation>

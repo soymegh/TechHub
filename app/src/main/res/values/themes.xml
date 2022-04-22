@@ -90,6 +90,14 @@
         <item name="transitionShapeAppearance">@style/ShapeAppearance.Owl.SmallComponent</item>
     </style>
 
+    <style name="DialogFullScreen" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+        <item name="android:windowExitAnimation">@anim/fade_in</item>
+    </style>
+
+
+
 
 
 </resources>
