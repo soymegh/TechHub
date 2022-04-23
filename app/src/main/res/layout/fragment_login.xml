@@ -20,12 +20,12 @@
             android:layout_marginStart="-20dp"
             android:layout_marginTop="-50dp"
             android:importantForAccessibility="no"
+            android:src="@drawable/ic_theme_1_lockup"
             app:layout_constraintBottom_toTopOf="@id/choose"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:layout_constraintVertical_chainStyle="spread_inside"
-            app:marginLeftSystemWindowInsets="@{true}"
-            android:src="@drawable/ic_theme_1_lockup" />
+            app:marginLeftSystemWindowInsets="@{true}" />
 
         <ImageView
             android:layout_width="wrap_content"
@@ -46,13 +46,14 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/grid_4"
+            android:fontFamily="@font/rubik_medium"
             android:gravity="end"
             android:padding="@dimen/grid_2"
+            android:layout_marginTop="-20dp"
+            android:text="@string/choose_topics_that_interest_you"
+            android:textAppearance="?attr/textAppearanceHeadline4"
             android:textColor="?attr/colorOnSurface"
             android:textStyle="bold"
-            android:text="@string/choose_topics_that_interest_you"
-            android:fontFamily="@font/rubik_medium"
-            android:textAppearance="?attr/textAppearanceHeadline4"
             app:layout_constraintBottom_toTopOf="@id/topic_grid"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -64,12 +65,12 @@
             android:id="@+id/topic_grid"
             android:layout_width="match_parent"
             android:layout_height="@dimen/onboarding_topics_height"
+            android:layout_marginTop="@dimen/margin_standard"
             android:clipChildren="false"
             android:clipToPadding="false"
             android:orientation="horizontal"
             android:paddingHorizontal="@dimen/grid_1"
             app:hasFixedSize="@{true}"
-            android:layout_marginTop="@dimen/margin_standard"
             app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
@@ -77,20 +78,43 @@
             app:paddingLeftSystemWindowInsets="@{true}"
             app:paddingRightSystemWindowInsets="@{true}"
             app:reverseLayout="true"
-            tools:listitem="@layout/onboarding_topic_item"
-            app:spanCount="@integer/onboarding_topics_rows" />
+            app:spanCount="@integer/onboarding_topics_rows"
+            tools:listitem="@layout/onboarding_topic_item" />
 
-        <com.google.android.material.floatingactionbutton.FloatingActionButton
-            android:id="@+id/button_continue"
-            android:layout_width="wrap_content"
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_sign_in"
+            style="@style/Widget.AppCompat.Button"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="@dimen/grid_2"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:marginBottomSystemWindowInsets="@{true}"
-            app:marginRightSystemWindowInsets="@{true}"
-            app:srcCompat="@drawable/ic_compass"
-            app:tint="?attr/colorOnPrimary" />
+            android:layout_marginHorizontal="@dimen/margin_standard"
+            android:backgroundTint="?attr/colorButtonNormal"
+            android:text="Sign In"
+            android:textAllCaps="false"
+            android:fontFamily="@font/rubik_medium"
+            android:textStyle="bold"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintTop_toBottomOf="@id/topic_grid"
+            android:layout_marginTop="@dimen/margin_extreme"
+
+            />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_sign_up"
+            style="@style/Widget.AppCompat.Button.Borderless"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="@dimen/margin_standard"
+            android:backgroundTint="?attr/colorPrimaryVariant"
+            android:text="Join now"
+            android:textAllCaps="false"
+            android:fontFamily="@font/rubik_medium"
+            android:textStyle="bold"
+            android:layout_marginTop="@dimen/margin_low"
+            app:strokeWidth="2dp"
+            android:textColor="?attr/colorOnPrimary"
+            app:layout_constraintTop_toBottomOf="@id/button_sign_in" />
+
+
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 

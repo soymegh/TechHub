@@ -16,6 +16,8 @@
     <integer name="onboarding_topics_rows">3</integer>
     <dimen name="onboarding_topics_height">210dp</dimen>
     <dimen name="margin_high">32dp</dimen>
+    <dimen name="margin_extreme">72dp</dimen>
     <dimen name="margin_standard">16dp</dimen>
+    <dimen name="margin_low">8dp</dimen>
 
 </resources>

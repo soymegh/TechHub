@@ -48,7 +48,7 @@ class LoginFragment : Fragment() {
     }
 
     private fun setupListeners() : Unit = binding.run {
-        buttonContinue.setOnClickListener {
+            buttonSignIn.setOnClickListener {
             findNavController().navigate(LoginFragmentDirections.closeLogin())
         }
     }

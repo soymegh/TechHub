@@ -31,6 +31,9 @@
         <item name="colorPrimaryVariant">@color/owl_pink_600</item>
         <item name="colorOnPrimary">#fff</item>
         <item name="colorOnSurface">#fff</item>
-        <item name="colorPrimaryContainer">@color/owl_pink_dark_primary</item>
+        <item name="colorPrimaryContainer">@color/dark_blue_grey</item>
+        <item name="colorButtonNormal">@color/dark_blue_grey</item>
     </style>
+
+
 </resources>
