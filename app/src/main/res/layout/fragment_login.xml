@@ -28,6 +28,7 @@
             app:marginLeftSystemWindowInsets="@{true}" />
 
         <ImageView
+            android:id="@+id/settings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/grid_2"
@@ -88,7 +89,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_standard"
             android:backgroundTint="?attr/colorButtonNormal"
-            android:text="Sign In"
+            android:text="@string/sign_in"
             android:textAllCaps="false"
             android:fontFamily="@font/rubik_medium"
             android:textStyle="bold"
@@ -105,7 +106,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_standard"
             android:backgroundTint="?attr/colorPrimaryVariant"
-            android:text="Join now"
+            android:text="@string/join_now"
             android:textAllCaps="false"
             android:fontFamily="@font/rubik_medium"
             android:textStyle="bold"

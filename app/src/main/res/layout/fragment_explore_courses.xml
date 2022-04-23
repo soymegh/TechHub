@@ -34,6 +34,8 @@
                 android:minHeight="80dp"
                 android:paddingStart="@dimen/grid_2"
                 app:menu="@menu/account"
+                app:title="@string/app_name"
+                app:titleTextAppearance="@style/Widget.Owl.TextAppearance.Toolbar"
                 />
 
         </com.google.android.material.appbar.AppBarLayout>

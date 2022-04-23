@@ -20,4 +20,10 @@
     <item name="android:paddingEnd">0dp</item>
   </style>
 
+  <style name="Widget.Owl.TextAppearance.Toolbar"
+    parent="TextAppearance.Material3.ActionBar.Title">
+    <item name="android:fontFamily">@font/rubik_medium</item>
+    <item name="android:textStyle">bold</item>
+  </style>
+
 </resources>

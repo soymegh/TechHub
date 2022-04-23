@@ -6,15 +6,15 @@
     </style>
 
     <style name="Owl.Blue">
-        <item name="colorPrimary">@color/owl_blue_200</item>
-        <item name="colorSecondary">@color/owl_yellow_200</item>
-        <item name="colorSurface">@color/owl_blue_dark_primary</item>
+        <item name="colorPrimary">@color/owl_pink_600</item>
+        <item name="colorSecondary">@color/owl_pink_500</item>
+        <item name="colorSurface">@color/matte_black</item>
     </style>
 
     <style name="ThemeOverlay.Owl.Blue" parent="@style/ThemeOverlay.MaterialComponents.Dark">
         <item name="colorPrimary">@color/owl_blue_200</item>
         <item name="colorSecondary">@color/owl_yellow_200</item>
-        <item name="colorSurface">@color/owl_blue_dark_primary</item>
+        <item name="colorSurface">@color/matte_black</item>
     </style>
 
     <style name="ThemeOverlay.Owl.Blue.Dark"/>

@@ -87,4 +87,9 @@ private fun getKey(property: ViewProperty): Int {
     }
 }
 
+fun listenForAllSpringsEnd(
+    onEnd: (Boolean) -> Unit,
+    vararg springs: SpringAnimation
+) = MultiSpringEndListener(onEnd, *springs)
+
 
