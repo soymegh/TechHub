@@ -12,7 +12,9 @@ import com.jonareas.android.techhub.databinding.ActivityMainBinding
 import com.jonareas.android.techhub.utils.animation.slideUpOnExit
 import com.jonareas.android.techhub.utils.gone
 import com.jonareas.android.techhub.utils.visible
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
     internal lateinit var binding: ActivityMainBinding private set
