@@ -11,7 +11,7 @@ import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.jonareas.android.techhub.R
-import com.jonareas.android.techhub.common.data.cache.model.CachedTopic
+import com.jonareas.android.techhub.core.data.cache.model.CachedTopic
 import com.jonareas.android.techhub.databinding.OnboardingTopicItemBinding
 import com.jonareas.android.techhub.utils.animation.TopicThumbnailTarget
 

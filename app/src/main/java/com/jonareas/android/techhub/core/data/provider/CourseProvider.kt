@@ -1,6 +1,6 @@
-package com.jonareas.android.techhub.common.data.provider
+package com.jonareas.android.techhub.core.data.provider
 
-import com.jonareas.android.techhub.common.data.cache.model.CachedCourse
+import com.jonareas.android.techhub.core.data.cache.model.CachedCourse
 
 object CourseProvider {
     val courses =

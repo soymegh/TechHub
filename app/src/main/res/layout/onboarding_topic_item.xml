@@ -8,7 +8,7 @@
 
         <variable
             name="topic"
-            type="com.jonareas.android.techhub.common.data.cache.model.CachedTopic" />
+            type="com.jonareas.android.techhub.core.data.cache.model.CachedTopic" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout

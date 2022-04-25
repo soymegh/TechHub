@@ -65,6 +65,7 @@ dependencies {
     // Lifecycle
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle"
     implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle"
+    implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle"
 
     // ROOM
     implementation "androidx.room:room-runtime:$room"
@@ -80,6 +81,13 @@ dependencies {
     // Dagger Hilt
     implementation "com.google.dagger:hilt-android:$dagger_hilt"
     kapt "com.google.dagger:hilt-compiler:$dagger_hilt"
+
+    // Data Store
+    implementation "androidx.datastore:datastore:$data_store"
+
+    // Kotlin Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines"
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:$kotlin_coroutines"
 
     // Kotlin Serialization
     implementation "org.jetbrains.kotlinx:kotlinx-serialization-json:$kotlin_serialization"
@@ -97,5 +105,13 @@ dependencies {
 
     // Splash Screen API
     implementation "androidx.core:core-splashscreen:$splash_screen"
+
+    // Gson
+    implementation "com.google.code.gson:gson:$gson"
+    implementation "com.squareup.retrofit2:converter-gson:$gson"
+
+    // Palette
+    implementation "androidx.palette:palette:$palette"
+
 
 }

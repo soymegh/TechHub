@@ -9,7 +9,7 @@
 
         <variable
             name="course"
-            type="com.jonareas.android.techhub.common.data.cache.model.CachedCourse" />
+            type="com.jonareas.android.techhub.core.data.cache.model.CachedCourse" />
 
         <variable
             name="clickHandler"

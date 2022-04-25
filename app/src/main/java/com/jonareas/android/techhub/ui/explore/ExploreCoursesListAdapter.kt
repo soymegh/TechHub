@@ -1,12 +1,11 @@
 package com.jonareas.android.techhub.ui.explore
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.jonareas.android.techhub.common.data.cache.model.CachedCourse
+import com.jonareas.android.techhub.core.data.cache.model.CachedCourse
 import com.jonareas.android.techhub.databinding.FeaturedItemBinding
 
 class ExploreCoursesListAdapter(

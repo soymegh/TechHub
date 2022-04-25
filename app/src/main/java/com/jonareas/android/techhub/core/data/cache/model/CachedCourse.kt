@@ -1,4 +1,4 @@
-package com.jonareas.android.techhub.common.data.cache.model
+package com.jonareas.android.techhub.core.data.cache.model
 
 import com.jonareas.android.techhub.utils.RANDOM_GENERATOR
 import com.jonareas.android.techhub.utils.RANDOM_GENERATOR_SEED

@@ -7,7 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
 import com.jonareas.android.techhub.R
-import com.jonareas.android.techhub.common.data.provider.Topics.topics
+import com.jonareas.android.techhub.core.data.provider.Topics.topics
 import com.jonareas.android.techhub.databinding.FragmentLoginBinding
 import com.jonareas.android.techhub.utils.animation.OscillatingScrollListener
 import com.jonareas.android.techhub.utils.animation.smoothScrollToPositionWithSpeed

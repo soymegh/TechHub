@@ -6,7 +6,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.doOnNextLayout
 import androidx.fragment.app.Fragment
-import com.jonareas.android.techhub.common.data.provider.CourseProvider
+import com.jonareas.android.techhub.core.data.provider.CourseProvider
 import com.jonareas.android.techhub.databinding.FragmentExploreCoursesBinding
 import com.jonareas.android.techhub.utils.animation.SpringAddItemAnimator
 
