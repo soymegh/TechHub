@@ -46,7 +46,6 @@ class LoginFragment : Fragment() {
                         override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {
                             super.onItemRangeInserted(positionStart, itemCount)
                             recyclerViewTopics.smoothScrollToPositionWithSpeed(itemCount)
-
                         }
                     })
 

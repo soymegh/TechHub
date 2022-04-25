@@ -20,6 +20,7 @@ import dagger.hilt.android.qualifiers.ApplicationContext
 import dagger.hilt.components.SingletonComponent
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.launch
+import java.io.BufferedReader
 import javax.inject.Provider
 import javax.inject.Singleton
 
@@ -29,33 +30,37 @@ object CacheModule {
 
     @Provides
     @Singleton
-    fun provideCallback(dispatcherProvider: DispatcherProvider, resources: Resources, topicDao: Provider<TopicDao>) : RoomDatabase.Callback =
-        object : RoomDatabase.Callback() {
-            override fun onCreate(db: SupportSQLiteDatabase) {
-                super.onCreate(db)
-                CoroutineScope(dispatcherProvider.io).launch {
-                    prepopulateDatabase(resources, topicDao.get())
-                }
+    fun provideCallback(
+        dispatcherProvider: DispatcherProvider, resources : Resources,
+        topicDao: Provider<TopicDao>
+    ) = object : RoomDatabase.Callback() {
+        override fun onCreate(db: SupportSQLiteDatabase) {
+            super.onCreate(db)
+            CoroutineScope(dispatcherProvider.io).launch {
+                prepopulateDatabase(resources, topicDao.get())
             }
         }
-
-
-    private suspend fun prepopulateDatabase(resources: Resources, topicDao: TopicDao) {
-        // Reading the players.json raw resource file into a String.
-        val jsonString = resources.openRawResource(R.raw.topics).bufferedReader().use {
-            it.readText()
-        }
-        // Converting it to a List using Gson.
-        val typeToken = object : TypeToken<List<CachedTopic>>() {}.type
-        val tennisPlayers = Gson().fromJson<List<CachedTopic>>(jsonString, typeToken).toTypedArray()
-        // Inserting all players in the database
-        topicDao.insert(*tennisPlayers)
     }
 
+    private suspend fun prepopulateDatabase(resources : Resources, topicDao: TopicDao) {
+        // Reading the topics.json raw resource file into a String
+        val jsonString = resources
+            .openRawResource(R.raw.topics)
+            .bufferedReader()
+            .use(BufferedReader::readText)
+
+        val typeToken = object : TypeToken<List<CachedTopic>>() {
+
+        }.type
+        // Converting all topics to a Kotlin List
+        val topics = Gson().fromJson<List<CachedTopic>>(jsonString, typeToken).toTypedArray()
+        // Inserting all topics in the local database
+        topicDao.insert(*topics)
+    }
 
     @Provides
     @Singleton
-    fun provideDatabase(@ApplicationContext context: Context, databaseCallback : RoomDatabase.Callback): TechHubDatabase =
+    fun provideDatabase(@ApplicationContext context : Context, databaseCallback : RoomDatabase.Callback) =
         Room.databaseBuilder(context, TechHubDatabase::class.java, DATABASE_NAME)
             .fallbackToDestructiveMigration()
             .addCallback(databaseCallback)
@@ -63,7 +68,7 @@ object CacheModule {
 
     @Provides
     @Singleton
-    fun provideTopicDao(database: TechHubDatabase): TopicDao = database.topicDao
-
+    fun provideTopicDao(database : TechHubDatabase) : TopicDao =
+        database.topicDao
 
 }

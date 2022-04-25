@@ -1,6 +1,7 @@
 package com.jonareas.android.techhub.ui
 
 import android.os.Bundle
+import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -20,9 +21,11 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var navController: NavController
-    private val topLevelDestinations = setOf(R.id.exploreCoursesFragment,
+    private val topLevelDestinations = setOf(
+        R.id.exploreCoursesFragment,
         R.id.myCoursesFragment,
-        R.id.searchCoursesFragment)
+        R.id.searchCoursesFragment
+    )
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,26 +34,29 @@ class MainActivity : AppCompatActivity() {
 
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
         setupNavigation()
     }
 
     private fun setupNavigation(): Unit = binding.run {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host)
-                as NavHostFragment
+            as NavHostFragment
         navController = navHostFragment.navController
         bottomNavigation.setupWithNavController(navController)
 
+        // Hide Bottom Navigation View in screens that don't require it
         lifecycleScope.launchWhenResumed {
             navController.addOnDestinationChangedListener { _, destination, _ ->
                 when (destination.id) {
-                    in topLevelDestinations -> bottomNavigation.visible()
+                    in topLevelDestinations -> {
+                        bottomNavigation.visible()
+                    }
                     else -> bottomNavigation.gone()
                 }
             }
         }
 
     }
+
 
     override fun onNavigateUp(): Boolean =
         navController.navigateUp() || super.onNavigateUp()

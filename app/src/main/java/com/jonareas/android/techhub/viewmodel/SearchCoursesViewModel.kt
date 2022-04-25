@@ -12,12 +12,11 @@ import kotlinx.coroutines.launch
 import javax.inject.Inject
 
 @HiltViewModel
-class LoginViewModel @Inject constructor(
+class SearchCoursesViewModel @Inject constructor(
     private val topicRepository: TopicRepository,
     private val dispatchers: DispatcherProvider,
 ) :
     ViewModel() {
-
     private var _topics = MutableLiveData<List<CachedTopic>>()
     val topics: LiveData<List<CachedTopic>> = _topics
 
@@ -27,10 +26,11 @@ class LoginViewModel @Inject constructor(
 
     private fun getAllTopics() {
         viewModelScope.launch(dispatchers.io) {
-            topicRepository.getAllFlow().collect { listOfTopics ->
+            topicRepository.getAllOrderedByNameFlow().collect { listOfTopics ->
                 _topics.postValue(listOfTopics)
             }
-        }
-    }
 
+        }
+
+    }
 }

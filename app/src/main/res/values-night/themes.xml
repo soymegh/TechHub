@@ -6,8 +6,8 @@
     </style>
 
     <style name="Owl.Blue">
-        <item name="colorPrimary">@color/owl_pink_600</item>
-        <item name="colorSecondary">@color/owl_pink_500</item>
+        <item name="colorPrimary">@color/deep_orange</item>
+        <item name="colorSecondary">@color/deep_orange</item>
         <item name="colorSurface">@color/matte_black</item>
     </style>
 

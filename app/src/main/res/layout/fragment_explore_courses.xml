@@ -14,7 +14,7 @@
         app:paddingTopSystemWindowInsets="@{true}"
         app:paddingLeftSystemWindowInsets="@{true}"
         app:paddingRightSystemWindowInsets="@{true}"
-        android:theme="@style/Owl.Blue"
+        android:theme="@style/Owl.Orange"
         android:transitionGroup="false"
         tools:context=".ui.featured.FeaturedFragment">
 
@@ -24,7 +24,7 @@
             android:layout_height="wrap_content"
             app:liftOnScroll="true"
             app:liftOnScrollTargetViewId="@id/featured_grid"
-            android:theme="@style/ThemeOverlay.Owl.Blue.Dark">
+            android:theme="@style/ThemeOverlay.Owl.Orange.Dark">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
