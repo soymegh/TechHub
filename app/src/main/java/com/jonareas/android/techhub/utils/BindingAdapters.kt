@@ -8,8 +8,11 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.updateLayoutParams
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.elevation.ElevationOverlayProvider
+import com.jonareas.android.techhub.core.data.cache.model.CachedTopic
+import com.jonareas.android.techhub.ui.login.TopicsAdapter
 
 @BindingAdapter("srcUrl", "circleCrop", "placeholder", "loadListener", requireAll = false)
 fun ImageView.bindSrcUrl(
@@ -178,4 +181,14 @@ fun View.requestApplyInsetsWhenAttached() {
             override fun onViewDetachedFromWindow(v: View) = Unit
         })
     }
+}
+
+
+/**
+ * Updates the data shown in the [RecyclerView]
+ */
+@BindingAdapter("listData")
+fun bindRecyclerView(recyclerView: RecyclerView, data: List<CachedTopic>?) {
+    val adapter = TopicsAdapter(recyclerView.context)
+    adapter.submitList(data)
 }

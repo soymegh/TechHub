@@ -36,9 +36,10 @@ class OscillatingScrollListener(
     }
 }
 
+
 fun RecyclerView.smoothScrollToPositionWithSpeed(
     position: Int,
-    millisPerInch: Float = 100f
+    millisPerInch: Float = 200f
 ) {
     val lm = requireNotNull(layoutManager)
     val scroller = object : LinearSmoothScroller(context) {

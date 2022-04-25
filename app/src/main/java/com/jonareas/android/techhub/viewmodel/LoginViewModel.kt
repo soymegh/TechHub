@@ -21,7 +21,6 @@ class LoginViewModel @Inject constructor(
     private var _topics = MutableLiveData<List<CachedTopic>>()
     val topics: LiveData<List<CachedTopic>> = _topics
 
-
     init {
         getAllTopics()
     }

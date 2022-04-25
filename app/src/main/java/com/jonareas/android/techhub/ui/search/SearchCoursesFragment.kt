@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import androidx.navigation.fragment.findNavController
 import com.jonareas.android.techhub.databinding.FragmentSearchCoursesBinding
 
 
@@ -20,6 +21,17 @@ class SearchCoursesFragment : Fragment() {
     ): View {
         _binding = FragmentSearchCoursesBinding.inflate(inflater, container, false)
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        setupListeners()
+    }
+
+    private fun setupListeners() {
+        binding.button.setOnClickListener {
+            findNavController().navigate(SearchCoursesFragmentDirections.actionSearchToLogin())
+        }
     }
 
 }

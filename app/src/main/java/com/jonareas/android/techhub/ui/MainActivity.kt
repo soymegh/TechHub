@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.lifecycle.lifecycleScope
+import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.jonareas.android.techhub.R
@@ -17,7 +18,8 @@ import dagger.hilt.android.AndroidEntryPoint
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
 
-    internal lateinit var binding: ActivityMainBinding private set
+    private lateinit var binding: ActivityMainBinding
+    private lateinit var navController: NavController
     private val topLevelDestinations = setOf(R.id.exploreCoursesFragment,
         R.id.myCoursesFragment,
         R.id.searchCoursesFragment)
@@ -36,7 +38,7 @@ class MainActivity : AppCompatActivity() {
     private fun setupNavigation(): Unit = binding.run {
         val navHostFragment = supportFragmentManager.findFragmentById(R.id.nav_host)
                 as NavHostFragment
-        val navController = navHostFragment.navController
+        navController = navHostFragment.navController
         bottomNavigation.setupWithNavController(navController)
 
         lifecycleScope.launchWhenResumed {
@@ -49,5 +51,9 @@ class MainActivity : AppCompatActivity() {
         }
 
     }
+
+    override fun onNavigateUp(): Boolean =
+        navController.navigateUp() || super.onNavigateUp()
+
 
 }

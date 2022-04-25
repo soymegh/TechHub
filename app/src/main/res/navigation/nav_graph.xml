@@ -12,7 +12,7 @@
         tools:layout="@layout/fragment_login"
         >
         <action
-            android:id="@+id/close_login"
+            android:id="@+id/action_explore_to_login"
             app:destination="@id/exploreCoursesFragment"
             app:popUpToInclusive="true"
             app:popUpTo="@id/loginFragment"
@@ -22,18 +22,25 @@
         android:id="@+id/exploreCoursesFragment"
         android:name="com.jonareas.android.techhub.ui.explore.ExploreCoursesFragment"
         android:label="fragment_all_courses"
-        tools:layout="@layout/fragment_explore_courses" >
-    </fragment>
+        tools:layout="@layout/fragment_explore_courses" />
     <fragment
         android:id="@+id/myCoursesFragment"
         android:name="com.jonareas.android.techhub.ui.courses.MyCoursesFragment"
         android:label="fragment_my_courses"
-        tools:layout="@layout/fragment_my_courses" />
+        tools:layout="@layout/fragment_my_courses" >
+        <action
+            android:id="@+id/action_my_courses_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
     <fragment
         android:id="@+id/searchCoursesFragment"
         android:name="com.jonareas.android.techhub.ui.search.SearchCoursesFragment"
         android:label="fragment_search_courses"
-        tools:layout="@layout/fragment_search_courses" />
+        tools:layout="@layout/fragment_search_courses" >
+        <action
+            android:id="@+id/action_search_to_login"
+            app:destination="@id/loginFragment" />
+    </fragment>
 
 
 </navigation>
