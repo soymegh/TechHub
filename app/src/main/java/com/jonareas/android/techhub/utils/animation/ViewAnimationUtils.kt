@@ -1,10 +1,12 @@
 package com.jonareas.android.techhub.utils.animation
 
 import android.animation.ObjectAnimator
+import android.graphics.Rect
 import android.view.View
 import android.view.ViewAnimationUtils
 import android.view.animation.BounceInterpolator
 import androidx.annotation.IdRes
+import androidx.annotation.Px
 import androidx.core.animation.doOnEnd
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.view.doOnLayout
@@ -12,6 +14,7 @@ import androidx.dynamicanimation.animation.DynamicAnimation
 import androidx.dynamicanimation.animation.DynamicAnimation.ViewProperty
 import androidx.dynamicanimation.animation.SpringAnimation
 import androidx.dynamicanimation.animation.SpringForce
+import androidx.recyclerview.widget.RecyclerView
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.utils.DEFAULT_ANIMATION_DURATION
 
@@ -91,5 +94,23 @@ fun listenForAllSpringsEnd(
     onEnd: (Boolean) -> Unit,
     vararg springs: SpringAnimation
 ) = MultiSpringEndListener(onEnd, *springs)
+
+/**
+ * A [RecyclerView.ItemDecoration] which adds the given `spacing` to the bottom of any view,
+ * unless it is the last item.
+ */
+class BottomSpacingItemDecoration(
+    @Px private val spacing: Int
+) : RecyclerView.ItemDecoration() {
+    override fun getItemOffsets(
+        outRect: Rect,
+        view: View,
+        parent: RecyclerView,
+        state: RecyclerView.State
+    ) {
+        val lastItem = parent.getChildAdapterPosition(view) == state.itemCount - 1
+        outRect.bottom = if (!lastItem) spacing else 0
+    }
+}
 
 

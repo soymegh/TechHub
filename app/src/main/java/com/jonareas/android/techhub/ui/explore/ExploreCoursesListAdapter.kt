@@ -6,16 +6,12 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.jonareas.android.techhub.core.data.cache.model.CachedCourse
+import com.jonareas.android.techhub.core.data.cache.model.CourseDiff
 import com.jonareas.android.techhub.databinding.FeaturedItemBinding
 
 class ExploreCoursesListAdapter(
     private val onClick: CourseViewClick,
 ) : ListAdapter<CachedCourse, FeaturedViewHolder>(CourseDiff) {
-
-    private companion object CourseDiff : DiffUtil.ItemCallback<CachedCourse>() {
-        override fun areItemsTheSame(oldItem: CachedCourse, newItem: CachedCourse) = oldItem.id == newItem.id
-        override fun areContentsTheSame(oldItem: CachedCourse, newItem: CachedCourse) = oldItem == newItem
-    }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeaturedViewHolder {
         return FeaturedViewHolder(

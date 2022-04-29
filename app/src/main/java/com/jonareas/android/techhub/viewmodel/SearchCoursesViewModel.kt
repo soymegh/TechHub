@@ -14,7 +14,7 @@ import javax.inject.Inject
 @HiltViewModel
 class SearchCoursesViewModel @Inject constructor(
     private val topicRepository: TopicRepository,
-    private val dispatchers: DispatcherProvider,
+    private val dispatchers: DispatcherProvider
 ) :
     ViewModel() {
     private var _topics = MutableLiveData<List<CachedTopic>>()
