@@ -4,7 +4,7 @@
     <style name="Base.TechHub" parent="Theme.MaterialComponents.DayNight.NoActionBar">
 
         <!--Material shape attributes-->
-        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Owl.SmallComponent</item>
+<!--        <item name="shapeAppearanceSmallComponent">@style/ShapeAppearance.Owl.SmallComponent</item>-->
         <item name="shapeAppearanceMediumComponent">@style/ShapeAppearance.Owl.MediumComponent</item>
         <item name="shapeAppearanceLargeComponent">@style/ShapeAppearance.Owl.LargeComponent</item>
 
@@ -32,11 +32,13 @@
     </style>
 
     <style name="Owl" parent="@style/Base.TechHub"/>
+    "?attr/colorPrimary"
 
     <style name="Owl.Light">
         <item name="colorPrimary">@color/polished_white</item>
         <item name="colorPrimaryVariant">@color/anti_flash_white</item>
-        <item name="colorSecondary">@color/black</item>
+        <item name="colorPrimarySurface">@color/anti_flash_white</item>
+        <item name="colorSecondary">@color/dark_blue_grey</item>
         <item name="colorSecondaryVariant">@color/matte_black</item>
     </style>
 

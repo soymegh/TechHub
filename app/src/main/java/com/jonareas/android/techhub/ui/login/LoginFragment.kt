@@ -25,7 +25,7 @@ class LoginFragment : Fragment() {
     private val binding: FragmentLoginBinding
         get() = _binding!!
 
-    private val loginViewModel : LoginViewModel by viewModels()
+    private val loginViewModel: LoginViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -63,9 +63,12 @@ class LoginFragment : Fragment() {
         setupListeners()
     }
 
-    private fun setupListeners() : Unit = binding.run {
-            buttonSignIn.setOnClickListener {
-            findNavController().navigate(LoginFragmentDirections.actionExploreToLogin())
+    private fun setupListeners(): Unit = binding.run {
+        buttonSignIn.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToSignInFragment())
+        }
+        buttonSignUp.setOnClickListener {
+            findNavController().navigate(LoginFragmentDirections.actionLoginFragmentToRegisterFragment())
         }
 
 

@@ -21,8 +21,8 @@
 
         <ImageView
             android:id="@+id/lockup"
-            android:layout_width="200dp"
-            android:layout_height="250dp"
+            android:layout_width="@dimen/logo_width"
+            android:layout_height="@dimen/logo_height_large"
             android:layout_marginStart="-20dp"
             android:layout_marginTop="-50dp"
             android:importantForAccessibility="no"
@@ -46,7 +46,8 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toTopOf="@id/lockup"
             app:marginRightSystemWindowInsets="@{true}"
-            app:srcCompat="@drawable/ic_gear" />
+            app:srcCompat="@drawable/ic_gear"
+            tools:ignore="TouchTargetSizeCheck" />
 
         <TextView
             android:id="@+id/choose"

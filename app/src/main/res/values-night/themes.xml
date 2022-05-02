@@ -1,4 +1,12 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="Owl.Light">
+        <item name="colorPrimary">@color/anti_flash_white</item>
+        <item name="colorPrimaryVariant">@color/anti_flash_white</item>
+        <item name="colorSecondary">@color/anti_flash_white</item>
+        <item name="colorSecondaryVariant">@color/matte_black</item>
+        <item name="colorSurface">@color/dark_blue_grey</item>
+    </style>
+
     <style name="Owl.Yellow">
         <item name="colorPrimary">@color/owl_yellow_200</item>
         <item name="colorSecondary">@color/owl_blue_200</item>
@@ -9,6 +17,7 @@
         <item name="colorPrimary">@color/deep_orange</item>
         <item name="colorSecondary">@color/deep_orange</item>
         <item name="colorSurface">@color/matte_black</item>
+        <item name="colorPrimarySurface">@color/dark_blue_grey</item>
     </style>
 
     <style name="ThemeOverlay.Owl.Blue" parent="@style/ThemeOverlay.MaterialComponents.Dark">

@@ -12,11 +12,12 @@
         tools:layout="@layout/fragment_login"
         >
         <action
-            android:id="@+id/action_explore_to_login"
-            app:destination="@id/exploreCoursesFragment"
-            app:popUpToInclusive="true"
-            app:popUpTo="@id/loginFragment"
-            app:enterAnim="@anim/slide_in_up" />
+            android:id="@+id/action_loginFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_loginFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
     </fragment>
     <fragment
         android:id="@+id/exploreCoursesFragment"
@@ -41,6 +42,23 @@
             android:id="@+id/action_search_to_login"
             app:destination="@id/loginFragment" />
     </fragment>
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.jonareas.android.techhub.ui.login.signIn.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_sign_in_to_courses"
+            app:destination="@id/exploreCoursesFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/loginFragment"
+            app:enterAnim="@anim/slide_in_up" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.jonareas.android.techhub.ui.login.register.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register"/>
 
 
 </navigation>

@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
   <!--Use an alias to switch which drawable is used in light/dark themes-->
-  <drawable name="ic_theme_1_lockup">@drawable/techhub_light_mode</drawable>
+  <drawable name="ic_theme_1_lockup">@drawable/techhub_logo_black</drawable>
+  <drawable name="ic_theme_rounded">@drawable/techhub_round_logo_black</drawable>
 </resources>

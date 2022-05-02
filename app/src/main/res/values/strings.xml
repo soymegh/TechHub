@@ -20,4 +20,15 @@
     <string name="explore">Explore</string>
     <string name="join_now">Join now</string>
     <string name="sign_in">Sign In</string>
+    <string name="create_new_account">Create New Account</string>
+    <string name="full_name">Full Name</string>
+    <string name="e_mail_hint">E-mail</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="techHub_support_email">techhubsupport@jonareas.com</string>
+    <string name="techHub_support_cell_number">(+505) 1800-2020</string>
+    <string name="disclaimer">By creating an account, you accept TechHub\'s Terms of Service and Privacy Policy.</string>
+    <string name="contact_us">Contact Us</string>
+    <string name="password">Password</string>
+    <string name="register">Register</string>
+    <string name="log_into_your_account">Log into your account</string>
 </resources>
