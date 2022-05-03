@@ -79,7 +79,7 @@
             android:orientation="horizontal"
             android:paddingHorizontal="@dimen/grid_1"
             app:hasFixedSize="@{true}"
-            app:layoutManager="androidx.recyclerview.widget.StaggeredGridLayoutManager"
+            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/choose"

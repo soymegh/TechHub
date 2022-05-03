@@ -1,12 +1,11 @@
 package com.jonareas.android.techhub.ui.login.signIn
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.databinding.FragmentSignInBinding
 
 
@@ -33,6 +32,9 @@ class SignInFragment : Fragment() {
         buttonSignIn.setOnClickListener {
             findNavController().navigate(SignInFragmentDirections.actionSignInToCourses())
         }
+       toolbar.setNavigationOnClickListener {
+           findNavController().navigateUp()
+       }
     }
 
     override fun onDestroyView() {

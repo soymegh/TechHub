@@ -1,12 +1,11 @@
 package com.jonareas.android.techhub.ui.login.register
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
-import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.databinding.FragmentRegisterBinding
 
 
@@ -31,7 +30,10 @@ class RegisterFragment : Fragment() {
     }
 
     private fun setupListeners() : Unit = binding.run {
-        buttonCreateNewAccount.setOnClickListener {
+        buttonRegister.setOnClickListener {
+            findNavController().navigateUp()
+        }
+        toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()
         }
     }

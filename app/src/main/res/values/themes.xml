@@ -40,6 +40,7 @@
         <item name="colorPrimarySurface">@color/anti_flash_white</item>
         <item name="colorSecondary">@color/dark_blue_grey</item>
         <item name="colorSecondaryVariant">@color/matte_black</item>
+
     </style>
 
     <style name="Owl.Yellow">

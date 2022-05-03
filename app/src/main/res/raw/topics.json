@@ -1,5 +1,10 @@
 [
   {
+    "name": "Biology",
+    "courses": 22,
+    "imageUrl": "https://source.unsplash.com/1PpyUZceg_I"
+  },
+  {
     "name": "Business",
     "courses": 58,
     "imageUrl": "https://source.unsplash.com/MYbhN8KaaEc"
