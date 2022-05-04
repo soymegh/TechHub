@@ -2,16 +2,15 @@ package com.jonareas.android.techhub.ui.explore
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.jonareas.android.techhub.core.data.cache.model.CachedCourse
-import com.jonareas.android.techhub.core.data.cache.model.CourseDiff
+import com.jonareas.android.techhub.core.data.cache.model.CachedCourse.Companion.courseDiff
 import com.jonareas.android.techhub.databinding.FeaturedItemBinding
 
 class ExploreCoursesListAdapter(
     private val onClick: CourseViewClick,
-) : ListAdapter<CachedCourse, FeaturedViewHolder>(CourseDiff) {
+) : ListAdapter<CachedCourse, FeaturedViewHolder>(courseDiff) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeaturedViewHolder {
         return FeaturedViewHolder(

@@ -36,9 +36,8 @@ class TopicsAdapter(context: Context) : ListAdapter<CachedTopic, TopicsViewHolde
         return TopicsViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: TopicsViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: TopicsViewHolder, position: Int) =
         holder.bind(getItem(position), selectedTint, selectedTopLeftCornerRadius, selectedDrawable)
-    }
 
     override fun onViewRecycled(holder: TopicsViewHolder) {
         holder.itemView.rotation = 0f

@@ -6,16 +6,16 @@ import androidx.room.PrimaryKey
 
 @Entity(tableName = "topics")
 data class CachedTopic(
-    val name: String,
-    val courses: Int,
-    val imageUrl: String,
     @PrimaryKey(autoGenerate = true)
     val topicId: Int = 0,
+    val name: String,
+    val courses: Int,
+    val imageUrl: String
 ) : CachedEntity {
     companion object {
         val topicDiff = object : DiffUtil.ItemCallback<CachedTopic>() {
             override fun areItemsTheSame(oldItem: CachedTopic, newItem: CachedTopic) =
-                oldItem.name == newItem.name
+                oldItem.topicId == newItem.topicId
 
             override fun areContentsTheSame(oldItem: CachedTopic, newItem: CachedTopic) =
                 oldItem == newItem

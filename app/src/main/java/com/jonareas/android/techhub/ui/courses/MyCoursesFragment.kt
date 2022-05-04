@@ -6,18 +6,23 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.core.view.doOnNextLayout
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.jonareas.android.techhub.R
-import com.jonareas.android.techhub.core.data.provider.CourseProvider.courses
 import com.jonareas.android.techhub.databinding.FragmentMyCoursesBinding
 import com.jonareas.android.techhub.utils.animation.BottomSpacingItemDecoration
 import com.jonareas.android.techhub.utils.animation.SpringAddItemAnimator
+import com.jonareas.android.techhub.viewmodel.MyCoursesViewModel
+import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.TimeUnit
 
+@AndroidEntryPoint
 class MyCoursesFragment : Fragment() {
 
     private var _binding : FragmentMyCoursesBinding? = null
     private val binding : FragmentMyCoursesBinding
         get() = _binding!!
+
+    private val viewModel : MyCoursesViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,7 +37,7 @@ class MyCoursesFragment : Fragment() {
                 adapter = MyCoursesAdapter().apply {
                     // add data after layout so that animations run
                     doOnNextLayout {
-                        submitList(courses)
+                        viewModel.courses.observe(viewLifecycleOwner) { courses -> courses?.let { submitList(it) } }
                         doOnNextLayout {
                             startPostponedEnterTransition()
                         }

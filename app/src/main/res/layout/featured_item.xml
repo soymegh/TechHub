@@ -22,7 +22,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/grid_0_5"
         android:foreground="?attr/selectableItemBackground"
-        android:onClick="@{(v) -> clickHandler.onClick(v, course.id)}"
+        android:onClick="@{(v) -> clickHandler.onClick(v, course.courseId)}"
         android:transitionName="@{course.name}"
         app:elevationOverlay="@{@dimen/card_elevation}">
 

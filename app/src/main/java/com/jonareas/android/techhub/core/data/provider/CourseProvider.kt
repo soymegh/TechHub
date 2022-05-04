@@ -6,7 +6,7 @@ object CourseProvider {
     val courses =
         listOf(
             CachedCourse(
-                id = 0,
+                courseId = 1,
                 name = "Stock Trading",
                 subject = "Finance",
                 thumbUrl = "https://source.unsplash.com/JpflvzEl5cg",
@@ -15,7 +15,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 1,
+                courseId = 2,
                 name = "Algorithms & Data Structures",
                 subject = "Computer Science",
                 thumbUrl = "https://source.unsplash.com/nuz3rK5iiKg",
@@ -24,7 +24,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 2,
+                courseId = 3,
                 name = "Python Programming",
                 subject = "Computer Science",
                 thumbUrl = "https://source.unsplash.com/5uU8HSpfwkI",
@@ -33,7 +33,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 3,
+                courseId = 4,
                 name = "Convolutional Neural Networks",
                 subject = "Data Analysis",
                 thumbUrl = "https://source.unsplash.com/ZiQkhI7417A",
@@ -42,7 +42,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 4,
+                courseId = 5,
                 name = "Time Series",
                 subject = "Statistics",
                 thumbUrl = "https://source.unsplash.com/IrRbSND5EUc",
@@ -51,7 +51,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 5,
+                courseId = 6,
                 name = "Blockchain Basics",
                 subject = "Finance",
                 thumbUrl = "https://source.unsplash.com/JrjhtBJ-pGU",
@@ -60,7 +60,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 6,
+                courseId = 7,
                 name = "Differential Equations",
                 subject = "Math",
                 thumbUrl = "https://source.unsplash.com/HQkz_lWT_lY",
@@ -69,7 +69,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 7,
+                courseId = 8,
                 name = "Advanced Android",
                 subject = "Software Development",
                 thumbUrl = "https://source.unsplash.com/HfWA-Axq6Ek",
@@ -78,7 +78,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 8,
+                courseId = 9,
                 name = "CART: Classification & Regression Trees",
                 subject = "Data Analysis",
                 thumbUrl = "https://source.unsplash.com/5VJLeQ-TrKs",
@@ -87,7 +87,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 9,
+                courseId = 10,
                 name = "Basics of Brand Identity",
                 subject = "Marketing",
                 thumbUrl = "https://source.unsplash.com/G9_Euqxpu4k",
@@ -96,7 +96,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 10,
+                courseId = 11,
                 name = "Location Lighting for Beginners",
                 subject = "Photography",
                 thumbUrl = "https://source.unsplash.com/pPxJTtxfV1A",
@@ -105,7 +105,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 11,
+                courseId = 12,
                 name = "Cinematography & Lighting",
                 subject = "Film",
                 thumbUrl = "https://source.unsplash.com/oIf4VCDztZY",
@@ -114,7 +114,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 12,
+                courseId = 13,
                 name = "Integral Calculus",
                 subject = "Math",
                 thumbUrl = "https://source.unsplash.com/hecib2an4T4",
@@ -123,7 +123,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 13,
+                courseId = 14,
                 name = "Linear Algebra",
                 subject = "Math",
                 thumbUrl = "https://source.unsplash.com/05A-kdOH6Hw",
@@ -132,7 +132,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 14,
+                courseId = 15,
                 name = "Power BI Reporting",
                 subject = "Data Analysis",
                 thumbUrl = "https://source.unsplash.com/JKUTrJ4vK00",
@@ -141,7 +141,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 15,
+                courseId = 16,
                 name = "Adobe Suite",
                 subject = "Graphic Design",
                 thumbUrl = "https://source.unsplash.com/v9vII5gV8Lw",
@@ -150,7 +150,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 16,
+                courseId = 17,
                 name = "Android Basics in Kotlin",
                 subject = "Software Development",
                 thumbUrl = "https://source.unsplash.com/lqcvMiBABHw",
@@ -159,7 +159,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 17,
+                courseId = 18,
                 name = "CI/CD with Gitlab",
                 subject = "Software Development",
                 thumbUrl = "https://source.unsplash.com/ZV_64LdGoao",
@@ -168,7 +168,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 18,
+                courseId = 19,
                 name = "Vector Calculus",
                 subject = "Math",
                 thumbUrl = "https://source.unsplash.com/5mZ_M06Fc9g",
@@ -176,7 +176,7 @@ object CourseProvider {
                 steps = 45,
                 step = 1
             ), CachedCourse(
-                id = 19,
+                courseId = 20,
                 name = "Virtual Reality in Unity",
                 subject = "Software Development",
                 thumbUrl = "https://source.unsplash.com/npTT9rD8wd4",
@@ -184,7 +184,7 @@ object CourseProvider {
                 steps = 23,
                 step = 1
             ), CachedCourse(
-                id = 20,
+                courseId = 21,
                 name = "Figma Asset Design",
                 subject = "Graphic Design",
                 thumbUrl = "https://source.unsplash.com/4tXfdctTcWs",
@@ -193,7 +193,7 @@ object CourseProvider {
                 step = 1
             ),
             CachedCourse(
-                id = 21,
+                courseId = 22,
                 name = "Computer Architecture",
                 subject = "Computer Science",
                 thumbUrl = "https://source.unsplash.com/aQYgUYwnCsM",
@@ -202,12 +202,21 @@ object CourseProvider {
                 step = 1
             ),
            CachedCourse(
-                id = 22,
+                courseId = 23,
                 name = "Machine Learning",
                 subject = "Data Analysis",
                 thumbUrl = "https://source.unsplash.com/zwd435-ewb4",
                 thumbContentDesc = "",
                 steps = 50,
+                step = 1
+            ),
+            CachedCourse(
+                courseId = 24,
+                name = "Multivariate Probability",
+                subject = "Statistics",
+                thumbUrl = "https://source.unsplash.com/yG9pCqSOrAg",
+                thumbContentDesc = "",
+                steps = 27,
                 step = 1
             )
 

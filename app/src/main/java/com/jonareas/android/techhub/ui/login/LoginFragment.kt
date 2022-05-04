@@ -33,6 +33,8 @@ class LoginFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         _binding = FragmentLoginBinding.inflate(inflater, container, false).apply {
+
+
             recyclerViewTopics.apply {
 
                 adapter = TopicsAdapter(context).apply {
@@ -41,8 +43,9 @@ class LoginFragment : Fragment() {
                     // We're setting reverseLayout on the RV to layout from RTL, but we still want
                     // data ordered LTR, so reverse it before setting
                     loginViewModel.topics.observe(viewLifecycleOwner) {
-                        submitList(it.reversed())
-                    }
+                            topics ->
+                        submitList(topics)
+                        topics?.let { submitList(it.reversed()) } }
 
                     registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {
                         override fun onItemRangeInserted(positionStart: Int, itemCount: Int) {

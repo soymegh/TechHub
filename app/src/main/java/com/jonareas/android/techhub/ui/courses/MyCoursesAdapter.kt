@@ -17,17 +17,16 @@ package com.jonareas.android.techhub.ui.courses
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.core.data.cache.model.CachedCourse
-import com.jonareas.android.techhub.core.data.cache.model.CourseDiff
+import com.jonareas.android.techhub.core.data.cache.model.CachedCourse.Companion.courseDiff
 import com.jonareas.android.techhub.databinding.CourseItemBinding
 import com.jonareas.android.techhub.utils.ShapeAppearanceTransformation
-class MyCoursesAdapter : ListAdapter<CachedCourse, MyCourseViewHolder>(CourseDiff) {
+class MyCoursesAdapter : ListAdapter<CachedCourse, MyCourseViewHolder>(courseDiff) {
 
     private object onClick : CourseViewClick {
         override fun onClick(view: View, courseId: Int) {
