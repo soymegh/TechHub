@@ -7,8 +7,7 @@ import kotlinx.coroutines.flow.flow
 import javax.inject.Inject
 
 class TopicRepositoryImpl @Inject constructor(private val dao: TopicDao) :
-    BaseRepositoryImpl<CachedTopic, Int>(dao),
-    TopicRepository {
+    BaseRepositoryImpl<CachedTopic, Int>(dao), TopicRepository {
     override suspend fun getAllOrderedByNameFlow(): Flow<List<CachedTopic>> = flow {
         emit(dao.getAllOrderedByName())
     }

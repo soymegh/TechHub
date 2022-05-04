@@ -44,7 +44,6 @@ class LoginFragment : Fragment() {
                     // data ordered LTR, so reverse it before setting
                     loginViewModel.topics.observe(viewLifecycleOwner) {
                             topics ->
-                        submitList(topics)
                         topics?.let { submitList(it.reversed()) } }
 
                     registerAdapterDataObserver(object : RecyclerView.AdapterDataObserver() {

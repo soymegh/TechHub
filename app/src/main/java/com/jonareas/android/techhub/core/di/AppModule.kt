@@ -1,6 +1,7 @@
 package com.jonareas.android.techhub.core.di
 
 import android.content.Context
+import android.content.res.Resources
 import com.jonareas.android.techhub.utils.DefaultDispatchers
 import com.jonareas.android.techhub.utils.DispatcherProvider
 import dagger.Module
@@ -17,7 +18,8 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideResources(@ApplicationContext context : Context) = context.resources
+    fun provideResources(@ApplicationContext context : Context) : Resources =
+        context.resources
 
     @Provides
     @Singleton

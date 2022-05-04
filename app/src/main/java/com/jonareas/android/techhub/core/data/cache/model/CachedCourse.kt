@@ -21,6 +21,7 @@ data class CachedCourse(
     val gender : String = if(status) "men" else "women",
     val instructor: String = "https://randomuser.me/api/portraits/${gender}/${courseId + 27}.jpg?seed=$RANDOM_GENERATOR_SEED"
 ) : CachedEntity {
+
     companion object {
         val courseDiff = object : DiffUtil.ItemCallback<CachedCourse>() {
             override fun areItemsTheSame(oldItem: CachedCourse, newItem: CachedCourse) =
@@ -30,4 +31,5 @@ data class CachedCourse(
                 oldItem == newItem
         }
     }
+
 }

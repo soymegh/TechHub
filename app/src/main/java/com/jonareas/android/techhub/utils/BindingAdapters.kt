@@ -16,7 +16,7 @@ import com.jonareas.android.techhub.ui.login.TopicsAdapter
 
 @BindingAdapter("srcUrl", "circleCrop", "placeholder", "loadListener", requireAll = false)
 fun ImageView.bindSrcUrl(
-    url: String,
+    url: String?,
     circleCrop: Boolean,
     placeholder: Drawable?,
     loadListener: GlideDrawableLoadListener?

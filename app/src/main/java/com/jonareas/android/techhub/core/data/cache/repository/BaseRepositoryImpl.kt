@@ -2,8 +2,9 @@ package com.jonareas.android.techhub.core.data.cache.repository
 
 import com.jonareas.android.techhub.core.data.cache.dao.BaseDao
 import com.jonareas.android.techhub.core.data.cache.model.CachedEntity
+import java.io.Serializable
 
-abstract class BaseRepositoryImpl<T : CachedEntity, ID>(private val dao: BaseDao<T>) :
+abstract class BaseRepositoryImpl<T : CachedEntity, ID : Serializable>(private val dao: BaseDao<T>) :
     BaseRepository<T, ID> {
 
     override suspend fun add(entity: T) = dao.insert(entity)

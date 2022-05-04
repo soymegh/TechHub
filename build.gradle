@@ -18,6 +18,7 @@ buildscript {
         lifecycle = "2.4.1"
         room = "2.4.2"
         ok_http3_logging = "5.0.0-alpha.3"
+        recycler_view = "1.2.1"
         retrofit = "2.9.0"
         preference = "1.2.0"
         paging = "3.1.1"

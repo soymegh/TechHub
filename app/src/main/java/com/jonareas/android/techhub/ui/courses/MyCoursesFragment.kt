@@ -7,6 +7,7 @@ import android.view.ViewGroup
 import androidx.core.view.doOnNextLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
+import androidx.recyclerview.widget.RecyclerView
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.databinding.FragmentMyCoursesBinding
 import com.jonareas.android.techhub.utils.animation.BottomSpacingItemDecoration
@@ -31,10 +32,10 @@ class MyCoursesFragment : Fragment() {
         val binding = FragmentMyCoursesBinding.inflate(inflater, container, false).apply {
             list.apply {
                 itemAnimator = SpringAddItemAnimator()
-                addItemDecoration(
-                    BottomSpacingItemDecoration(resources.getDimensionPixelSize(R.dimen.grid_2))
-                )
+                addItemDecoration(BottomSpacingItemDecoration(resources.getDimensionPixelSize(R.dimen.grid_2)))
                 adapter = MyCoursesAdapter().apply {
+                    // ensuring a correct scroll position
+                    stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
                     // add data after layout so that animations run
                     doOnNextLayout {
                         viewModel.courses.observe(viewLifecycleOwner) { courses -> courses?.let { submitList(it) } }

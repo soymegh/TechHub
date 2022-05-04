@@ -14,9 +14,11 @@ import dagger.hilt.android.components.ViewModelComponent
 abstract class RepositoryModule {
 
     @Binds
-    abstract fun bindTopicRepository(topicRepositoryImpl: TopicRepositoryImpl) : TopicRepository
+    abstract fun bindTopicRepository(topicRepositoryImpl: TopicRepositoryImpl) :
+            TopicRepository
 
     @Binds
-    abstract fun bindCourseRepository(courseRepositoryImpl : CourseRepositoryImpl) : CourseRepository
+    abstract fun bindCourseRepository(courseRepositoryImpl : CourseRepositoryImpl) :
+            CourseRepository
 
 }

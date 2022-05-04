@@ -22,7 +22,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             android:minHeight="?attr/actionBarSize"
             app:contentInsetStartWithNavigation="0dp"
-            app:navigationIcon="@drawable/ic_back"
+            app:navigationIcon="@drawable/ic_back_button"
             />
 
         <LinearLayout

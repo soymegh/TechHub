@@ -17,6 +17,7 @@ package com.jonareas.android.techhub.ui.courses
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
@@ -25,16 +26,17 @@ import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.core.data.cache.model.CachedCourse
 import com.jonareas.android.techhub.core.data.cache.model.CachedCourse.Companion.courseDiff
 import com.jonareas.android.techhub.databinding.CourseItemBinding
+import com.jonareas.android.techhub.ui.explore.CourseViewClick
 import com.jonareas.android.techhub.utils.ShapeAppearanceTransformation
-class MyCoursesAdapter : ListAdapter<CachedCourse, MyCourseViewHolder>(courseDiff) {
+class MyCoursesAdapter : ListAdapter<CachedCourse, MyCoursesAdapter.MyCourseViewHolder>(courseDiff) {
 
-    private object onClick : CourseViewClick {
+    private object OnClick : CourseViewClick {
         override fun onClick(view: View, courseId: Int) {
             val extras = FragmentNavigatorExtras(
                 view to "shared_element"
             )
-//            val action = MyCoursesFragmentDirections.actionMycoursesToLearn(courseId)
-//            view.findNavController().navigate(action, extras)
+            val action = MyCoursesFragmentDirections.actionMyCoursesToCourseDetail(courseId)
+            view.findNavController().navigate(action, extras)
         }
     }
 
@@ -51,34 +53,32 @@ class MyCoursesAdapter : ListAdapter<CachedCourse, MyCourseViewHolder>(courseDif
         )
     }
 
-    override fun onBindViewHolder(holder: MyCourseViewHolder, position: Int) {
-        holder.bind(getItem(position), shapeTransform, onClick)
-    }
+    inner class MyCourseViewHolder(
+        private val binding: CourseItemBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
 
-}
-
-interface CourseViewClick {
-    fun onClick(view: View, courseId: Int)
-}
-
-class MyCourseViewHolder(
-    private val binding: CourseItemBinding
-) : RecyclerView.ViewHolder(binding.root) {
-
-    fun bind(
-        course: CachedCourse,
-        imageTransform: ShapeAppearanceTransformation,
-        onClick: CourseViewClick
-    ) {
-        binding.run {
-            this.course = course
-            /*this.clickHandler = onClick*/
-            Glide.with(courseImage)
-                .load(course.thumbUrl)
-                .placeholder(R.drawable.stroked_course_image_placeholder)
-                .transform(imageTransform)
-                .into(courseImage)
-            executePendingBindings()
+        fun bind(
+            course: CachedCourse,
+            imageTransform: ShapeAppearanceTransformation,
+            onClick: CourseViewClick
+        ) {
+            binding.run {
+                this.course = course
+                Glide.with(courseImage)
+                    .load(course.thumbUrl)
+                    .placeholder(R.drawable.stroked_course_image_placeholder)
+                    .transform(imageTransform)
+                    .into(courseImage)
+                this.clickHandler = onClick
+                executePendingBindings()
+            }
         }
     }
+
+    override fun onBindViewHolder(holder: MyCourseViewHolder, position: Int) {
+        holder.bind(getItem(position), shapeTransform, OnClick)
+    }
+
 }
+
+
