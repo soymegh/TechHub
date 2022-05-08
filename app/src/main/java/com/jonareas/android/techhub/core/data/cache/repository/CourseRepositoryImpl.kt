@@ -8,6 +8,9 @@ import javax.inject.Inject
 
 class CourseRepositoryImpl @Inject constructor(private val dao : CourseDao) :
     BaseRepositoryImpl<CachedCourse, Int>(dao), CourseRepository {
+    override suspend fun getAllCoursesByNameFlow(courseName: String): Flow<List<CachedCourse>> = flow {
+        emit(dao.getAllCoursesByName(courseName))
+    }
 
     override suspend fun getRelatedCoursesFlow(courseName: String): Flow<List<CachedCourse>> = flow {
         emit(dao.getRelatedCourses(courseName))

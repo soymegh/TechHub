@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.widget.SearchView.OnQueryTextListener
 import androidx.core.view.doOnNextLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
@@ -20,13 +21,14 @@ import java.util.concurrent.TimeUnit
  * Explore all courses, a [Fragment] which displays the list of all current available courses.
  */
 @AndroidEntryPoint
-class ExploreCoursesFragment : Fragment() {
+class ExploreCoursesFragment : Fragment(), OnQueryTextListener {
 
     private var _binding: FragmentExploreCoursesBinding? = null
     private val binding: FragmentExploreCoursesBinding
         get() = _binding!!
 
     private val viewModel: ExploreCoursesViewModel by viewModels()
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,18 +40,23 @@ class ExploreCoursesFragment : Fragment() {
                     val extras = FragmentNavigatorExtras(
                         view to "shared_element"
                     )
-                    val action = ExploreCoursesFragmentDirections.actionExploreCoursesFragmentToCourseDetailFragment(courseId)
+                    val action =
+                        ExploreCoursesFragmentDirections.actionExploreCoursesFragmentToCourseDetailFragment(
+                            courseId)
                     findNavController().navigate(action, extras)
 
                 }
             }
+
+            searchView.setOnQueryTextListener(this@ExploreCoursesFragment)
 
             featuredGrid.apply {
 
                 itemAnimator = SpringAddItemAnimator()
                 adapter = ExploreCoursesListAdapter(onClick).apply {
                     // ensuring a correct scroll position
-                    stateRestorationPolicy = RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+                    stateRestorationPolicy =
+                        RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
                     // add data after layout so that animations run
                     doOnNextLayout {
                         viewModel.courses.observe(viewLifecycleOwner) { submitList(it) }
@@ -72,6 +79,19 @@ class ExploreCoursesFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    override fun onQueryTextSubmit(query: String?): Boolean {
+        if(query != null)
+            viewModel.onSearchQuery(query)
+        return false
+    }
+
+
+    override fun onQueryTextChange(query: String?): Boolean {
+        if(query != null && query.isEmpty())
+            viewModel.onSearchQuery(query)
+        return false
     }
 
 }

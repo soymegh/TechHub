@@ -5,5 +5,7 @@ import kotlinx.coroutines.flow.Flow
 
 interface CourseRepository : BaseRepository<CachedCourse, Int> {
 
+    suspend fun getAllCoursesByNameFlow(courseName : String) : Flow<List<CachedCourse>>
+
     suspend fun getRelatedCoursesFlow(courseName : String) : Flow<List<CachedCourse>>
 }

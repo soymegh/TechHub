@@ -17,6 +17,7 @@
         <item name="colorPrimary">@color/deep_orange</item>
         <item name="colorSecondary">@color/deep_orange</item>
         <item name="colorSurface">@color/matte_black</item>
+        <item name="colorOnPrimary">@color/white</item>
         <item name="colorPrimarySurface">@color/dark_blue_grey</item>
     </style>
 

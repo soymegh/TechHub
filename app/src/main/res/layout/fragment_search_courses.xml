@@ -14,39 +14,29 @@
         app:paddingRightSystemWindowInsets="@{true}"
         tools:context=".ui.search.SearchFragment">
 
-        <com.google.android.material.appbar.AppBarLayout
-            android:paddingTop="@dimen/margin_standard"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="?attr/colorPrimarySurface"
-            app:liftOnScroll="true"
-            app:liftOnScrollTargetViewId="@id/search_results"
-            android:theme="@style/ThemeOverlay.Owl.Blue.Dark">
-
-            <androidx.appcompat.widget.Toolbar
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll|enterAlways|snap"
-                android:minHeight="?attr/actionBarSize"
-                app:navigationIcon="@drawable/ic_search"
-                app:contentInsetStartWithNavigation="0dp"
-                app:menu="@menu/account">
-
-                <EditText
+                <com.google.android.material.appbar.AppBarLayout
+                    android:id="@+id/appbar"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:background="@null"
-                    android:hint="@string/search_techHub"
-                    android:imeOptions="actionSearch"
-                    android:inputType="textCapWords"
-                    android:lines="1"
-                    android:minHeight="48dp"
-                    android:selectAllOnFocus="true"
-                    android:textAppearance="?attr/textAppearanceSubtitle1" />
+                    android:background="?attr/colorPrimarySurface"
+                    app:liftOnScroll="true"
+                    app:liftOnScrollTargetViewId="@id/featured_grid"
+                    android:theme="@style/Owl.Blue">
 
-            </androidx.appcompat.widget.Toolbar>
+                    <androidx.appcompat.widget.Toolbar
+                        android:id="@+id/toolbar"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:layout_scrollFlags="scroll|enterAlways|snap"
+                        android:minHeight="80dp"
+                        app:titleTextColor="?attr/colorOnPrimary"
+                        android:paddingStart="@dimen/grid_2"
+                        app:menu="@menu/account"
+                        app:title="@string/app_name"
+                        app:titleTextAppearance="@style/Widget.Owl.TextAppearance.Toolbar"
+                        />
 
-        </com.google.android.material.appbar.AppBarLayout>
+                </com.google.android.material.appbar.AppBarLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/search_results"
