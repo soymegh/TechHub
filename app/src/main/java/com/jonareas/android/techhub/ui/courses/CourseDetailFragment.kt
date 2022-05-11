@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.databinding.FragmentCourseDetailBinding
+import com.jonareas.android.techhub.ui.explore.CourseViewClick
 import com.jonareas.android.techhub.utils.transitions.MaterialContainerTransition
 import com.jonareas.android.techhub.viewmodel.CourseDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -28,6 +29,15 @@ class CourseDetailFragment : Fragment() {
     private val navArgs: CourseDetailFragmentArgs by navArgs()
     private val viewModel: CourseDetailViewModel by viewModels()
 
+    val onClick: CourseViewClick = object : CourseViewClick {
+        override fun onClick(view: View, courseId: Int) {
+
+            val action =
+                CourseDetailFragmentDirections.actionCourseDetailToSelf(courseId)
+            findNavController().navigate(action)
+        }
+    }
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -35,16 +45,14 @@ class CourseDetailFragment : Fragment() {
     ): View {
         val courseId = navArgs.courseId
         viewModel.getCourseById(courseId)
+        viewModel
         _binding = FragmentCourseDetailBinding.inflate(inflater, container, false).apply {
             lifecycleOwner = viewLifecycleOwner
-            viewModel.course.observe(viewLifecycleOwner) {
-                course = it
+            viewModel.course.observe(viewLifecycleOwner) { selectedCourse ->
+                course = selectedCourse
             }
             toolbar.setNavigationOnClickListener {
                 findNavController().navigateUp()
-            }
-            alsoLikeList.adapter = RelatedCoursesAdapter().apply {
-                viewModel.relatedCourses
             }
             postponeEnterTransition(300L, TimeUnit.MILLISECONDS)
             val interp = AnimationUtils.loadInterpolator(
@@ -73,6 +81,15 @@ class CourseDetailFragment : Fragment() {
 
         }
         return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        viewModel.relatedCourses.observe(viewLifecycleOwner) { listOfCourses ->
+            val relatedCoursesAdapter = RelatedCoursesAdapter(onClick)
+            binding.alsoLikeList.adapter = relatedCoursesAdapter
+            relatedCoursesAdapter.submitList(listOfCourses)
+        }
     }
 
     override fun onDestroyView() {

@@ -83,6 +83,16 @@
         <argument
             android:name="courseId"
             app:argType="integer" />
+        <action
+            android:id="@+id/action_course_detail_to_self"
+            app:destination="@id/courseDetailFragment"
+            app:enterAnim="@anim/slide_in_up_linear"
+            app:exitAnim="@anim/slide_out_down"
+            app:popEnterAnim="@anim/slide_in_up_linear"
+            app:popExitAnim="@anim/shrink_fade_out_center"
+            app:popUpTo="@id/courseDetailFragment"
+            app:popUpToInclusive="true"
+            />
     </fragment>
 
 

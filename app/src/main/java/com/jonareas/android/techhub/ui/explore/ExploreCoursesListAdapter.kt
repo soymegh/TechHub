@@ -9,7 +9,7 @@ import com.jonareas.android.techhub.core.data.cache.model.CachedCourse.Companion
 import com.jonareas.android.techhub.databinding.FeaturedItemBinding
 
 class ExploreCoursesListAdapter(
-    private val onClick: CourseViewClick,
+    private val onClick: CourseViewClick
 ) : ListAdapter<CachedCourse, FeaturedViewHolder>(courseDiff) {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): FeaturedViewHolder {

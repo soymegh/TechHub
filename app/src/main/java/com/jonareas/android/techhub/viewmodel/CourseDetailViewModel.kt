@@ -8,6 +8,7 @@ import com.jonareas.android.techhub.core.data.cache.model.CachedCourse
 import com.jonareas.android.techhub.core.data.cache.repository.CourseRepository
 import com.jonareas.android.techhub.utils.DispatcherProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
+import kotlinx.coroutines.flow.collectLatest
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
@@ -20,8 +21,22 @@ class CourseDetailViewModel @Inject constructor(
     private var _course = MutableLiveData<CachedCourse>()
     val course: LiveData<CachedCourse> = _course
 
+
     private var _relatedCourses = MutableLiveData<List<CachedCourse>>()
     val relatedCourses : LiveData<List<CachedCourse>> = _relatedCourses
+
+    init {
+        getRelatedCourses()
+    }
+
+    private fun getRelatedCourses() {
+        viewModelScope.launch(dispatchers.io) {
+            courseRepository.getRelatedCoursesFlow().collectLatest { listOfCourses ->
+                _relatedCourses.postValue(listOfCourses)
+            }
+
+        }
+    }
 
 
     internal fun getCourseById(id : Int) {

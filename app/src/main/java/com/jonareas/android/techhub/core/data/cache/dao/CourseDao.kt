@@ -16,6 +16,6 @@ interface CourseDao : BaseDao<CachedCourse> {
     @Query("SELECT * FROM courses where courseId = :id")
     fun getById(id : Int) : CachedCourse
 
-    @Query("SELECT * FROM courses WHERE name LIKE :name LIMIT :pageSize OFFSET :pageIndex")
-    fun getRelatedCourses(name : String, pageSize : Int = 5, pageIndex : Int = 1) : List<CachedCourse>
+    @Query("SELECT * FROM courses ORDER BY RANDOM() LIMIT 20")
+    fun getRelatedCourses() : List<CachedCourse>
 }

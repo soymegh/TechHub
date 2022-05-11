@@ -7,5 +7,5 @@ interface CourseRepository : BaseRepository<CachedCourse, Int> {
 
     suspend fun getAllCoursesByNameFlow(courseName : String) : Flow<List<CachedCourse>>
 
-    suspend fun getRelatedCoursesFlow(courseName : String) : Flow<List<CachedCourse>>
+    suspend fun getRelatedCoursesFlow() : Flow<List<CachedCourse>>
 }
