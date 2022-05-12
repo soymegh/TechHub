@@ -41,6 +41,7 @@
     <color name="yellow">#FFCA03</color>
     <color name="gradient_mid">#F12C20</color>
     <color name="deep_orange">#FE4500</color>
+    <color name="light_orange">#FD7500</color>
     <color name="matte_black">#171717</color>
     <color name="purple_maximum">#784072</color>
     <color name="polished_white">#F0F8FF</color>
@@ -49,6 +50,6 @@
     <color name="alice_blue">#DBE9F4</color>
     <color name="anti_flash_white">#F4F6F9</color>
     <color name="blue_grey">#444851</color>
-    <color name="dark_blue_grey">#333333</color>
+    <color name="dark_blue_grey">#313333</color>
     <color name="grey_800">#424242</color>
 </resources>
