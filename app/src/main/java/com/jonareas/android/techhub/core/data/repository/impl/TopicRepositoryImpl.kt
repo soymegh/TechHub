@@ -1,7 +1,8 @@
-package com.jonareas.android.techhub.core.data.cache.repository
+package com.jonareas.android.techhub.core.data.repository.impl
 
 import com.jonareas.android.techhub.core.data.cache.dao.TopicDao
 import com.jonareas.android.techhub.core.data.cache.model.CachedTopic
+import com.jonareas.android.techhub.core.data.repository.TopicRepository
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.flow
 import javax.inject.Inject

@@ -1,7 +1,8 @@
-package com.jonareas.android.techhub.core.data.cache.repository
+package com.jonareas.android.techhub.core.data.repository.impl
 
 import com.jonareas.android.techhub.core.data.cache.dao.BaseDao
 import com.jonareas.android.techhub.core.data.cache.model.CachedEntity
+import com.jonareas.android.techhub.core.data.repository.BaseRepository
 import java.io.Serializable
 
 abstract class BaseRepositoryImpl<T : CachedEntity, ID : Serializable>(private val dao: BaseDao<T>) :

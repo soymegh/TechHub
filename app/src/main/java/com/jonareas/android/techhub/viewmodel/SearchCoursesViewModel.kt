@@ -5,7 +5,7 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.jonareas.android.techhub.core.data.cache.model.CachedTopic
-import com.jonareas.android.techhub.core.data.cache.repository.TopicRepository
+import com.jonareas.android.techhub.core.data.repository.TopicRepository
 import com.jonareas.android.techhub.utils.DispatcherProvider
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.launch

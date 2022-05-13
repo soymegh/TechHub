@@ -1,7 +1,6 @@
 package com.jonareas.android.techhub.core.di
 
 import android.content.Context
-import android.content.res.Resources
 import androidx.room.Room
 import androidx.room.RoomDatabase
 import androidx.sqlite.db.SupportSQLiteDatabase
@@ -29,8 +28,8 @@ object CacheModule {
     @Provides
     @Singleton
     fun provideCallback(
-        dispatcherProvider: DispatcherProvider, resources : Resources,
-        topicDao: Provider<TopicDao>, courseDao : Provider<CourseDao>
+        dispatcherProvider: DispatcherProvider, topicDao: Provider<TopicDao>,
+        courseDao : Provider<CourseDao>
     ) = object : RoomDatabase.Callback() {
         override fun onCreate(db: SupportSQLiteDatabase) {
             super.onCreate(db)

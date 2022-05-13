@@ -1,4 +1,4 @@
-package com.jonareas.android.techhub.core.data.cache.repository
+package com.jonareas.android.techhub.core.data.repository
 
 import com.jonareas.android.techhub.core.data.cache.model.CachedEntity
 import kotlinx.coroutines.flow.Flow

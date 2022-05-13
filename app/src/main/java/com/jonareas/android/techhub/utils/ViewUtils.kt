@@ -1,6 +1,7 @@
 package com.jonareas.android.techhub.utils
 
 import android.view.View
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import com.jonareas.android.techhub.ui.MainActivity
 
@@ -26,3 +27,9 @@ fun View.gone() {
 fun View.invisible() {
     this.visibility = View.INVISIBLE
 }
+
+/**
+ * Retrieves the text of an [EditText] as a Kotlin String
+ */
+val EditText.string : String
+    get() = text.toString()
