@@ -88,6 +88,8 @@ dependencies {
 
     // Data Store
     implementation "androidx.datastore:datastore:$data_store"
+    implementation "androidx.datastore:datastore-preferences:$data_store"
+    implementation "androidx.datastore:datastore-preferences-core:$data_store"
 
     // Kotlin Coroutines
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:$kotlin_coroutines"

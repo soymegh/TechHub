@@ -12,7 +12,7 @@ import androidx.navigation.fragment.navArgs
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.databinding.FragmentCourseDetailBinding
 import com.jonareas.android.techhub.ui.explore.CourseViewClick
-import com.jonareas.android.techhub.utils.transitions.MaterialContainerTransition
+import com.jonareas.android.techhub.animation.transitions.MaterialContainerTransition
 import com.jonareas.android.techhub.viewmodel.CourseDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.TimeUnit

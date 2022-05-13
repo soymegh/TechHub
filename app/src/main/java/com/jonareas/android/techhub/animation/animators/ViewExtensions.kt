@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.jonareas.android.techhub.utils.animation
+package com.jonareas.android.techhub.animation.animators
 
 import android.animation.ValueAnimator
 import android.content.Context

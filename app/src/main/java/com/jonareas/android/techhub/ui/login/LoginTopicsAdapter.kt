@@ -13,7 +13,7 @@ import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.core.data.cache.model.CachedTopic
 import com.jonareas.android.techhub.core.data.cache.model.CachedTopic.Companion.topicDiff
 import com.jonareas.android.techhub.databinding.OnboardingTopicItemBinding
-import com.jonareas.android.techhub.utils.animation.TopicThumbnailTarget
+import com.jonareas.android.techhub.animation.animators.TopicThumbnailTarget
 
 class TopicsAdapter(context: Context) : ListAdapter<CachedTopic, TopicsViewHolder>(topicDiff) {
 

@@ -1,7 +1,6 @@
 package com.jonareas.android.techhub.ui
 
 import android.os.Bundle
-import android.view.MenuItem
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
@@ -10,8 +9,8 @@ import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.jonareas.android.techhub.R
+import com.jonareas.android.techhub.animation.animators.slideUpOnExit
 import com.jonareas.android.techhub.databinding.ActivityMainBinding
-import com.jonareas.android.techhub.utils.animation.slideUpOnExit
 import com.jonareas.android.techhub.utils.gone
 import com.jonareas.android.techhub.utils.visible
 import dagger.hilt.android.AndroidEntryPoint

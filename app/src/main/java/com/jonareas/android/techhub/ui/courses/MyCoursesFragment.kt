@@ -10,8 +10,8 @@ import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.RecyclerView
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.databinding.FragmentMyCoursesBinding
-import com.jonareas.android.techhub.utils.animation.BottomSpacingItemDecoration
-import com.jonareas.android.techhub.utils.animation.SpringAddItemAnimator
+import com.jonareas.android.techhub.animation.animators.BottomSpacingItemDecoration
+import com.jonareas.android.techhub.animation.animators.SpringAddItemAnimator
 import com.jonareas.android.techhub.viewmodel.MyCoursesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.TimeUnit

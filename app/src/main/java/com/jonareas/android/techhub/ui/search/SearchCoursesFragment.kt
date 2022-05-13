@@ -8,7 +8,7 @@ import androidx.core.view.doOnNextLayout
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import com.jonareas.android.techhub.databinding.FragmentSearchCoursesBinding
-import com.jonareas.android.techhub.utils.animation.SpringAddItemAnimator
+import com.jonareas.android.techhub.animation.animators.SpringAddItemAnimator
 import com.jonareas.android.techhub.viewmodel.SearchCoursesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

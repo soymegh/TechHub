@@ -14,16 +14,12 @@
  * limitations under the License.
  */
 
-package com.jonareas.android.techhub.utils.animation
+package com.jonareas.android.techhub.animation.animators
 
 import android.graphics.Canvas
 import android.graphics.Paint
 import android.graphics.Path
-import android.graphics.Rect
 import android.graphics.RectF
-import android.graphics.Shader
-import androidx.core.graphics.toRectF
-import com.google.android.material.shape.RoundedCornerTreatment
 import com.google.android.material.shape.ShapeAppearanceModel
 
 class CornerRounding(

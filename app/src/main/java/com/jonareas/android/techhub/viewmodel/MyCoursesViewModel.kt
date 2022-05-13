@@ -13,7 +13,8 @@ import javax.inject.Inject
 
 @HiltViewModel
 class MyCoursesViewModel @Inject constructor(private val courseRepository: CourseRepository,
-                                             private val dispatchers: DispatcherProvider): ViewModel() {
+                                             private val dispatchers: DispatcherProvider
+): ViewModel() {
 
     private var _courses = MutableLiveData<List<CachedCourse>>()
     val courses: LiveData<List<CachedCourse>> = _courses

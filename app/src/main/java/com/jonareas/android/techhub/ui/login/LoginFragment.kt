@@ -10,8 +10,8 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.jonareas.android.techhub.R
 import com.jonareas.android.techhub.databinding.FragmentLoginBinding
-import com.jonareas.android.techhub.utils.animation.OscillatingScrollListener
-import com.jonareas.android.techhub.utils.animation.smoothScrollToPositionWithSpeed
+import com.jonareas.android.techhub.animation.animators.OscillatingScrollListener
+import com.jonareas.android.techhub.animation.animators.smoothScrollToPositionWithSpeed
 import com.jonareas.android.techhub.viewmodel.LoginViewModel
 import dagger.hilt.android.AndroidEntryPoint
 

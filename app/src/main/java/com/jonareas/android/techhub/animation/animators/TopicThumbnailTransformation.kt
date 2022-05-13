@@ -1,4 +1,4 @@
-package com.jonareas.android.techhub.utils.animation
+package com.jonareas.android.techhub.animation.animators
 
 import android.graphics.Bitmap
 import android.graphics.drawable.Drawable

@@ -12,7 +12,7 @@ import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
 import com.jonareas.android.techhub.databinding.FragmentExploreCoursesBinding
-import com.jonareas.android.techhub.utils.animation.SpringAddItemAnimator
+import com.jonareas.android.techhub.animation.animators.SpringAddItemAnimator
 import com.jonareas.android.techhub.viewmodel.ExploreCoursesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.TimeUnit

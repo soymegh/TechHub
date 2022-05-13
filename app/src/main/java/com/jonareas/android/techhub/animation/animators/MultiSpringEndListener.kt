@@ -1,4 +1,4 @@
-package com.jonareas.android.techhub.utils.animation
+package com.jonareas.android.techhub.animation.animators
 
 import androidx.dynamicanimation.animation.DynamicAnimation
 import androidx.dynamicanimation.animation.SpringAnimation

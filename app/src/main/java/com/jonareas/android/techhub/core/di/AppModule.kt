@@ -15,7 +15,6 @@ object AppModule {
 
     @Provides
     @Singleton
-    fun provideDispatchers() : DispatcherProvider =
-        DefaultDispatchers
+    fun bindDispatchers(): DispatcherProvider = DefaultDispatchers
 
 }

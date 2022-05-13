@@ -1,4 +1,4 @@
-package com.jonareas.android.techhub.utils.transitions
+package com.jonareas.android.techhub.animation.transitions
 
 import android.animation.Animator
 import android.animation.ObjectAnimator
@@ -22,8 +22,8 @@ import androidx.transition.TransitionValues
 import com.google.android.material.shape.ShapeAppearanceModel
 import com.google.android.material.shape.Shapeable
 import com.jonareas.android.techhub.R
-import com.jonareas.android.techhub.utils.animation.*
-import com.jonareas.android.techhub.utils.transitions.MaterialContainerTransitionDrawable.PROGRESS
+import com.jonareas.android.techhub.animation.animators.*
+import com.jonareas.android.techhub.animation.transitions.MaterialContainerTransitionDrawable.PROGRESS
 
 @Px
 private const val BITMAP_PADDING_BOTTOM = 1
