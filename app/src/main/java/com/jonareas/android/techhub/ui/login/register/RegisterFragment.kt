@@ -9,6 +9,7 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import com.jonareas.android.techhub.core.presentation.model.User
 import com.jonareas.android.techhub.databinding.FragmentRegisterBinding
+import com.jonareas.android.techhub.utils.showToast
 import com.jonareas.android.techhub.utils.string
 import com.jonareas.android.techhub.viewmodel.RegisterViewModel
 import dagger.hilt.android.AndroidEntryPoint
@@ -43,6 +44,7 @@ class RegisterFragment : Fragment() {
         buttonRegister.setOnClickListener {
             val user = binding.run { User(editTextFullName.string, editTextPassword.string, editTextEmail.string) }
             viewModel.onUserRegister(user)
+            showToast("SENT REGISTER USER REQUEST")
         }
         toolbar.setNavigationOnClickListener {
             findNavController().navigateUp()

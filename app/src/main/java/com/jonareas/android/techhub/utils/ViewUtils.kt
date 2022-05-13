@@ -2,6 +2,7 @@ package com.jonareas.android.techhub.utils
 
 import android.view.View
 import android.widget.EditText
+import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.jonareas.android.techhub.ui.MainActivity
 
@@ -33,3 +34,9 @@ fun View.invisible() {
  */
 val EditText.string : String
     get() = text.toString()
+
+/**
+ * Shows a [Toast]
+ * */
+fun Fragment.showToast(message : String, duration : Int = Toast.LENGTH_SHORT) =
+    Toast.makeText(context, message, duration).show()

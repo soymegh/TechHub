@@ -14,7 +14,7 @@ interface LoginService {
     suspend fun registerUser(@Body registerUserRequest: RegisterUserRequest)
 
     @POST(ApiConstants.LOGIN_END_POINT)
-    suspend fun authenticateUser(authenticateRequest : AuthenticateUserRequest) :
+    suspend fun authenticateUser(@Body authenticateRequest : AuthenticateUserRequest) :
             AuthenticateUserResponse
 
 }
