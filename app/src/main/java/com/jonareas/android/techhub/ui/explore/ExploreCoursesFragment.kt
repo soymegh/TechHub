@@ -11,8 +11,9 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.RecyclerView
-import com.jonareas.android.techhub.databinding.FragmentExploreCoursesBinding
 import com.jonareas.android.techhub.animation.animators.SpringAddItemAnimator
+import com.jonareas.android.techhub.databinding.FragmentExploreCoursesBinding
+import com.jonareas.android.techhub.ui.explore.ExploreCoursesListAdapter.ScrollDirection
 import com.jonareas.android.techhub.viewmodel.ExploreCoursesViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.TimeUnit
@@ -42,58 +43,69 @@ class ExploreCoursesFragment : Fragment(), OnQueryTextListener {
     }
 
 
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?,
+    ): View {
+        _binding = FragmentExploreCoursesBinding.inflate(inflater, container, false).apply {
 
-            override fun onCreateView(
-                inflater: LayoutInflater, container: ViewGroup?,
-                savedInstanceState: Bundle?,
-            ): View {
-                _binding = FragmentExploreCoursesBinding.inflate(inflater, container, false).apply {
 
+            searchView.setOnQueryTextListener(this@ExploreCoursesFragment)
 
-                    searchView.setOnQueryTextListener(this@ExploreCoursesFragment)
+            featuredGrid.apply {
 
-                    featuredGrid.apply {
+                itemAnimator = SpringAddItemAnimator()
+                adapter = ExploreCoursesListAdapter(onClick).apply {
+                    // ensuring a correct scroll position
+                    stateRestorationPolicy =
+                        RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
+                    // Change the scroll direction for the adapter's enum class on scroll
+                    addOnScrollListener(object : RecyclerView.OnScrollListener() {
+                        override fun onScrolled(
+                            recyclerView: RecyclerView,
+                            dx: Int,
+                            dy: Int,
+                        ) {
+                            scrollDirection =
+                                if (dy > 0) ScrollDirection.DOWN else ScrollDirection.UP
+                        }
+                    })
 
-                        itemAnimator = SpringAddItemAnimator()
-                        adapter = ExploreCoursesListAdapter(onClick).apply {
-                            // ensuring a correct scroll position
-                            stateRestorationPolicy =
-                                RecyclerView.Adapter.StateRestorationPolicy.PREVENT_WHEN_EMPTY
-                            // add data after layout so that animations run
-                            doOnNextLayout {
-                                viewModel.courses.observe(viewLifecycleOwner) { submitList(it) }
-                                doOnNextLayout {
-                                    startPostponedEnterTransition()
-                                }
-                            }
+                    // add data after layout so that animations run
+                    doOnNextLayout {
+                        viewModel.courses.observe(viewLifecycleOwner) { submitList(it) }
+                        doOnNextLayout {
+                            startPostponedEnterTransition()
                         }
                     }
                 }
-                postponeEnterTransition(1000L, TimeUnit.MILLISECONDS)
-                return binding.root
             }
-
-            override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-                super.onViewCreated(view, savedInstanceState)
-            }
-
-
-            override fun onDestroyView() {
-                super.onDestroyView()
-                _binding = null
-            }
-
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                if (query != null)
-                    viewModel.onSearchQuery(query)
-                return false
-            }
-
-
-            override fun onQueryTextChange(query: String?): Boolean {
-                if (query != null && query.isEmpty())
-                    viewModel.onSearchQuery(query)
-                return false
-            }
-
         }
+        postponeEnterTransition(1000L, TimeUnit.MILLISECONDS)
+        return binding.root
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+    }
+
+
+    override fun onDestroyView() {
+        super.onDestroyView()
+        _binding = null
+    }
+
+    override fun onQueryTextSubmit(query: String?): Boolean {
+        if (query != null)
+            viewModel.onSearchQuery(query)
+        return false
+    }
+
+
+    override fun onQueryTextChange(query: String?): Boolean {
+        if (query != null && query.isEmpty())
+            viewModel.onSearchQuery(query)
+        return false
+    }
+
+}

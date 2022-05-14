@@ -7,10 +7,7 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
-import com.jonareas.android.techhub.core.presentation.model.User
 import com.jonareas.android.techhub.databinding.FragmentSignInBinding
-import com.jonareas.android.techhub.utils.showToast
-import com.jonareas.android.techhub.utils.string
 import com.jonareas.android.techhub.viewmodel.SignInViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -47,8 +44,7 @@ class SignInFragment : Fragment() {
 
     private fun setupListeners() : Unit = binding.run {
         buttonSignIn.setOnClickListener {
-            viewModel.onUserSignIn(User(binding.editTextFullName.string, binding.editTextPassword.string))
-            showToast("EXPECTING TOKEN VALUE")
+            findNavController().navigate(SignInFragmentDirections.actionSignInToCourses())
         }
        toolbar.setNavigationOnClickListener {
            findNavController().navigateUp()

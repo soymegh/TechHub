@@ -12,6 +12,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import com.google.android.material.elevation.ElevationOverlayProvider
 import com.jonareas.android.techhub.core.data.cache.model.CachedTopic
+import com.jonareas.android.techhub.ui.explore.ExploreCoursesListAdapter
 import com.jonareas.android.techhub.ui.login.TopicsAdapter
 
 @BindingAdapter("srcUrl", "circleCrop", "placeholder", "loadListener", requireAll = false)
@@ -192,3 +193,4 @@ fun bindRecyclerView(recyclerView: RecyclerView, data: List<CachedTopic>?) {
     val adapter = TopicsAdapter(recyclerView.context)
     adapter.submitList(data)
 }
+

@@ -17,6 +17,7 @@ package com.jonareas.android.techhub.ui.courses
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.animation.AnimationUtils
 import androidx.navigation.findNavController
 import androidx.navigation.fragment.FragmentNavigatorExtras
 import androidx.recyclerview.widget.ListAdapter
@@ -37,6 +38,13 @@ class MyCoursesAdapter : ListAdapter<CachedCourse, MyCoursesAdapter.MyCourseView
             )
             val action = MyCoursesFragmentDirections.actionMyCoursesToCourseDetail(courseId)
             view.findNavController().navigate(action, extras)
+        }
+    }
+
+    private fun animateView(viewToAnimate: View) {
+        if (viewToAnimate.animation == null) {
+            val animation = AnimationUtils.loadAnimation(viewToAnimate.context, R.anim.slide_from_bottom_slow)
+            viewToAnimate.animation = animation
         }
     }
 
@@ -70,6 +78,7 @@ class MyCoursesAdapter : ListAdapter<CachedCourse, MyCoursesAdapter.MyCourseView
                     .transform(imageTransform)
                     .into(courseImage)
                 this.clickHandler = onClick
+                animateView(itemView)
                 executePendingBindings()
             }
         }
