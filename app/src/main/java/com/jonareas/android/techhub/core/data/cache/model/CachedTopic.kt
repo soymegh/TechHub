@@ -9,7 +9,7 @@ data class CachedTopic(
     @PrimaryKey(autoGenerate = true)
     val topicId: Int = 0,
     val name: String,
-    val courses: Int,
+    val totalCourses: Int,
     val imageUrl: String
 ) : CachedEntity {
     companion object {

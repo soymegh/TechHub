@@ -1,0 +1,173 @@
+[
+  {
+    "name": "Android Basics in Kotlin",
+    "description": "Welcome to Android Basics in Kotlin! In this course, you'll learn the basics of building Android apps with the Kotlin programming language. Along the way, you'll develop a collection of apps to start your journey as an Android developer.",
+    "imageUrl": "https://source.unsplash.com/lqcvMiBABHw",
+    "imageContentDesc": "Kotlin Code",
+    "steps": 15,
+    "step": 1,
+    "instructorId": 18,
+    "topicId": 14
+  },
+  {
+    "name": "Advanced Android",
+    "description": "In this course, you will learn how to make your app production-ready by developing a variety of different sample apps, each designed to showcase advanced capabilities of the Android platform, including fragments, widgets, media playback, and testing. You’ll learn how to create UI tests using the Espresso framework, to leverage third-party libraries and services like ExoPlayer and Firebase Cloud Messaging, and use Google APIs to make your app aware of its location. By the end of the course, you’ll know how to publish your own app to the Google Play Store, where you can reach and engage users across the globe.",
+    "imageUrl": "https://source.unsplash.com/HfWA-Axq6Ek",
+    "imageContentDesc": "Android Logo",
+    "steps": 35,
+    "step": 21,
+    "instructorId": 18,
+    "topicId": 14
+  },
+  {
+    "name": "CI/CD with Gitlab",
+    "description": "This course explains what Continuous Integration/Continuous Deployment (CI/CD) pipelines are and what value they bring to the software development lifecycle. It also outlines the architecture behind GitLab's CI/CD pipelines and explains how to set up basic CI/CD pipelines in your own projects. Finally, it touches on a handful of specific CI/CD pipeline use cases, including pushing your app to a Docker Container registry and using one of GitLab's security scanners.",
+    "imageUrl": "https://source.unsplash.com/ZV_64LdGoao",
+    "imageContentDesc": "Gitlab",
+    "steps": 20,
+    "step": 11,
+    "instructorId": 18,
+    "topicId": 14
+  },
+  {
+    "name": "Virtual Reality in Unity",
+    "description": "In this Unity sponsored course, you will learn how to design and develop your own Virtual Reality (VR) applications. You will create prototypes, attempt challenges, and complete quizzes to build and solidify your skill set. At the same time, you will be guided through creating your own unique VR project from start to finish, beginning with a blank design document and ending with a fully functional project.",
+    "imageUrl": "https://source.unsplash.com/npTT9rD8wd4",
+    "imageContentDesc": "Virtual Reality Headset",
+    "steps": 40,
+    "step": 9,
+    "instructorId": 29,
+    "topicId": 10
+  },
+  {
+    "name": "R Market Analysis",
+    "description": "In this course you will learn basic financial technical analysis technics using R and some of it's basic financial packages(quantmod, TTR) to better understand your favorites stocks. You'll assess stock trading strategies performance by comparing their annualized return, standard deviation and Sharpe ratio against buy and hold benchmark.",
+    "imageUrl": "https://source.unsplash.com/JpflvzEl5cg",
+    "imageContentDesc": "Stock Trends",
+    "steps": 30,
+    "step": 28,
+    "instructorId": 13,
+    "topicId": 7
+  },
+  {
+    "name": "Algorithms & Data Structures",
+    "description": "Learn how to differentiate between linear data structures like linkedlists, arrays, arraylists, stacks, and queues, and select the correct structure for a given situation. Analyze data structure performance with the course visualization tool. Visualize and study nonlinear/hierarchical data structures such as Binary Trees, BSTs and Heaps. ",
+    "imageUrl": "https://source.unsplash.com/nuz3rK5iiKg",
+    "imageContentDesc": "Graph Algorithm",
+    "steps": 20,
+    "step": 1,
+    "instructorId": 12,
+    "topicId": 3
+  },
+  {
+    "name": "Python Programming",
+    "description": "An introduction to programming using a language called Python. Learn how to read and write code as well as how to test and \"debug\" it. Designed for students with and without prior programming experience who'd like to learn Python specifically. Learn about functions, arguments, and return values (oh my!); variables and types; conditions and Boolean expressions; loops; and objects and methods. Plus exceptions, file I/O, and libraries. Hands-on opportunities for lots of practice. Exercises inspired by real-world programming problems.",
+    "imageUrl": "https://source.unsplash.com/5uU8HSpfwkI",
+    "imageContentDesc": "Python Snake",
+    "steps": 25,
+    "step": 15,
+    "instructorId": 12,
+    "topicId": 3
+  },
+  {
+    "name": "Convolutional Neural Networks",
+    "description": "You will understand how computer vision has evolved and become familiar with its exciting applications such as autonomous driving, face recognition, reading radiology images, and more.\n\nBy the end, you will be able to build a convolutional neural network, including recent variations such as residual networks; apply convolutional networks to visual detection and recognition tasks; and use neural style transfer to generate art and apply these algorithms to a variety of image, video, and other 2D or 3D data. ",
+    "imageUrl": "https://source.unsplash.com/ZiQkhI7417A",
+    "imageContentDesc": "Neural Network",
+    "steps": 50,
+    "step": 7,
+    "instructorId": 33,
+    "topicId": 6
+  },
+  {
+    "name": "Time Series",
+    "description": "The course provides a survey of the theory and application of time series methods in econometrics. Topics covered will include univariate stationary and non-stationary models, vector autoregressions, frequency domain methods, models for estimation and inference in persistent time series, and structural breaks.\n\nWe will cover different methods of estimation and inferences of modern dynamic stochastic general equilibrium models (DSGE): simulated method of moments, Maximum likelihood and Bayesian approach. The empirical applications in the course will be drawn primarily from macroeconomics.",
+    "imageUrl": "https://source.unsplash.com/IrRbSND5EUc",
+    "imageContentDesc": "Trend line",
+    "steps": 35,
+    "step": 18,
+    "instructorId": 26,
+    "topicId": 15
+  },
+  {
+    "name": "Blockchain Basics",
+    "description": "This first course of the Blockchain specialization provides a broad overview of the essential concepts of blockchain technology – by initially exploring the Bitcoin protocol followed by the Ethereum protocol – to lay the foundation necessary for developing applications and programming. You will be equipped with the knowledge needed to create nodes on your personal Ethereum blockchain, create accounts, unlock accounts, mine, transact, transfer Ethers, and check balances.",
+    "imageUrl": "https://source.unsplash.com/JrjhtBJ-pGU",
+    "imageContentDesc": "Bitcoin Logo",
+    "steps": 25,
+    "step": 13,
+    "instructorId": 1,
+    "topicId": 7
+  },
+  {
+    "name": "CART: Classification & Regression Trees",
+    "description": "This course describes tree-based algorithms for regression and classification. These methods are simple, intuitive and, more importantly, highly \"visual\". A deeper understanding of tree-based models provides a successful tool to comprehend advanced machine learning algorithms. By the end of this course, you will learn how to build a decision tree and understand their advantages and limitations.",
+    "imageUrl": "https://source.unsplash.com/5VJLeQ-TrKs",
+    "imageContentDesc": "Regression Trees",
+    "steps": 35,
+    "step": 21,
+    "instructorId": 15,
+    "topicId": 6
+  },
+  {
+    "name": "Basics of Brand Identity",
+    "description": "Brand identity and Strategy is a IE Business School course for those professionals who are ready to adopt a creative approach to empowering brands.\n\nStudents will go through a journey that starts with understanding what a brand is and how they can build successful ones, whilst simultaneously segmenting their consumers appropriately. The course explores positioning and its importance to successful brands looking at perceptual maps and the well-known iceberg model. It culminates in development of real brand houses, which can be applied to the working world, and how picking the right name, colors and logo can be instrumental to a brand’s success.",
+    "imageUrl": "https://source.unsplash.com/G9_Euqxpu4k",
+    "imageContentDesc": "Brands",
+    "steps": 20,
+    "step": 10,
+    "instructorId": 20,
+    "topicId": 5
+  },
+  {
+    "name": "Location Lightning for Beginners",
+    "description": "A comprehensive online studio lighting course teaching you how to start a photographic studio and how to use professional lighting equipment for portraiture. Through the course, you’ll be taught how to set up your own professional studio with limited space, equipment and budget. Learn various lighting set-ups with a variety of equipment to create beautiful portraits that can be made even in a home studio.",
+    "imageUrl": "https://source.unsplash.com/pPxJTtxfV1A",
+    "imageContentDesc": "Photo Lightning",
+    "steps": 30,
+    "step": 23,
+    "instructorId": 19,
+    "topicId": 13
+  },
+  {
+    "name": "Cinematography & Lighting",
+    "description": "Lighting is one of the most powerful tools in the cinematographer’s tool kit, and understanding how to light means knowing the qualities of light. In this hand-on lesson, learn the attributes of light and how to control each one to create the desired visual and emotional tone on screen.",
+    "imageUrl": "https://source.unsplash.com/oIf4VCDztZY",
+    "imageContentDesc": "Photo Lightning",
+    "steps": 30,
+    "step": 16,
+    "instructorId": 30,
+    "topicId": 8
+  },
+  {
+    "name": "Integral Calculus",
+    "description": "This specialization builds on topics introduced in single and multivariable differentiable calculus to develop the theory and applications of integral calculus.  , The focus on the specialization is to using calculus to address questions in the natural and social sciences. Students will learn to use the techniques presented in this class to process, analyze, and interpret data, and to communicate meaningful results, using scientific computing and mathematical modeling. Topics include functions as models of data, differential and integral calculus of functions of one and several variables, differential equations, and optimization and estimation techniques.",
+    "imageUrl": "https://source.unsplash.com/hecib2an4T4",
+    "imageContentDesc": "Integral Calculus",
+    "steps": 30,
+    "step": 20,
+    "instructorId": 21,
+    "topicId": 12
+  },
+  {
+    "name": "Linear Algebra",
+    "description": "This course is all about matrices, and concisely covers the linear algebra that an engineer should know.   The mathematics in this course is presented at the level of an advanced high school student, but typically students should take this course after completing a university-level single variable calculus course.  There are no derivatives or integrals in this course, but students are expected to have attained a sufficient level of mathematical maturity.  Nevertheless, anyone who wants to learn the basics of matrix algebra is welcome to join.",
+    "imageUrl": "https://source.unsplash.com/05A-kdOH6Hw",
+    "imageContentDesc": "System of Linear Equations",
+    "steps": 40,
+    "step": 32,
+    "instructorId": 21,
+    "topicId": 12
+  },
+  {
+    "name": "Power BI Reporting",
+    "description": "New Power BI users will begin the course by gaining a conceptual understanding of the Power BI desktop application and the Power BI service. Learners will explore the Power BI interface while learning how to manage pages and understand the basics of visualizations. Learners will engage in numerous hands-on experiences to discover how to import, connect, clean, transform, and model their own data in the Power BI desktop application. Learners will investigate reports, learn about workspaces, and practice viewing, creating, and publishing reports to the Power BI service. Finally, learners will become proficient in the creation and utilization dashboards.",
+    "imageUrl": "https://source.unsplash.com/JKUTrJ4vK00",
+    "imageContentDesc": "Dashboard",
+    "steps": 15,
+    "step": 14,
+    "instructorId": 37,
+    "topicId": 2
+  }
+
+]
