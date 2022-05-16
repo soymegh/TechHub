@@ -20,7 +20,7 @@
         tools:targetApi="o">
 
         <ImageView
-            android:id="@+id/lockup"
+            android:id="@+id/techhub_logo"
             android:layout_width="@dimen/logo_width"
             android:layout_height="@dimen/logo_height_large"
             android:layout_marginStart="-20dp"
@@ -42,9 +42,9 @@
             android:clickable="true"
             android:contentDescription="@string/settings"
             android:focusable="true"
-            app:layout_constraintBottom_toBottomOf="@id/lockup"
+            app:layout_constraintBottom_toBottomOf="@id/techhub_logo"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toTopOf="@id/lockup"
+            app:layout_constraintTop_toTopOf="@id/techhub_logo"
             app:marginRightSystemWindowInsets="@{true}"
             app:srcCompat="@drawable/ic_gear"
             tools:ignore="TouchTargetSizeCheck" />
@@ -65,7 +65,7 @@
             app:layout_constraintBottom_toTopOf="@id/recycler_view_topics"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/lockup"
+            app:layout_constraintTop_toBottomOf="@id/techhub_logo"
             app:marginLeftSystemWindowInsets="@{true}"
             app:marginRightSystemWindowInsets="@{true}" />
 
@@ -95,16 +95,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="@dimen/margin_standard"
+            android:layout_marginTop="@dimen/margin_extreme"
             android:backgroundTint="?attr/colorButtonNormal"
+            android:fontFamily="@font/rubik_medium"
             android:text="@string/sign_in"
             android:textAllCaps="false"
-            android:fontFamily="@font/rubik_medium"
-            android:textStyle="bold"
             android:textColor="?attr/colorOnPrimary"
+            android:textStyle="bold"
             app:layout_constraintTop_toBottomOf="@id/recycler_view_topics"
-            android:layout_marginTop="@dimen/margin_extreme"
 
-            />
+            tools:layout_editor_absoluteX="16dp" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/button_sign_up"

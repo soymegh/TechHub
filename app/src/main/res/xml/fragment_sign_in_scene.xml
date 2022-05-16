@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<MotionScene xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ConstraintSet android:id="@+id/start">
+        <Constraint
+            android:id="@+id/text_input_layout_username"
+            android:layout_width="wrap_content" />
+
+        <Constraint android:id="@+id/logo"
+            android:rotationX="45"
+            />
+
+
+        <Constraint
+            android:id="@+id/text_input_layout_sign_in_password"
+            android:layout_width="wrap_content" />
+
+        <Constraint
+            android:id="@+id/button_sign_in"
+            android:layout_width="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </ConstraintSet>
+
+    <ConstraintSet android:id="@+id/end">
+        <Constraint android:id="@id/text_input_layout_sign_in_password" />
+        <Constraint android:id="@id/text_input_layout_username" />
+        <Constraint android:id="@id/button_sign_in" />
+    </ConstraintSet>
+
+    <Transition
+        app:autoTransition="animateToEnd"
+        app:constraintSetEnd="@id/end"
+        app:constraintSetStart="@+id/start"
+        app:duration="600"
+        app:motionInterpolator="anticipate" />
+</MotionScene>

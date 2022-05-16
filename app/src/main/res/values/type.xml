@@ -30,16 +30,17 @@
 
     <style name="TextAppearance.Owl.Headline6" parent="TextAppearance.MaterialComponents.Headline6">
         <item name="fontFamily">@font/rubik_medium</item>
-        <item name="lineHeight">28sp</item>
+        <item name="lineHeight">25sp</item>
     </style>
 
+
     <style name="TextAppearance.Owl.Subtitle1" parent="TextAppearance.MaterialComponents.Subtitle1">
-        <item name="fontFamily">@font/rubik_medium</item>
+        <item name="fontFamily">@font/rubik</item>
         <item name="lineHeight">22sp</item>
     </style>
 
     <style name="TextAppearance.Owl.Subtitle2" parent="TextAppearance.MaterialComponents.Subtitle2">
-        <item name="fontFamily">@font/rubik_medium</item>
+        <item name="fontFamily">@font/rubik</item>
     </style>
 
     <style name="TextAppearance.Owl.Body1" parent="TextAppearance.MaterialComponents.Body1">

@@ -150,7 +150,7 @@
     "topicId": 12
   },
   {
-    "name": "Power BI Reporting",
+    "name": "Power BI",
     "description": "New Power BI users will begin the course by gaining a conceptual understanding of the Power BI desktop application and the Power BI service. Learners will explore the Power BI interface while learning how to manage pages and understand the basics of visualizations. Learners will engage in numerous hands-on experiences to discover how to import, connect, clean, transform, and model their own data in the Power BI desktop application. Learners will investigate reports, learn about workspaces, and practice viewing, creating, and publishing reports to the Power BI service. Finally, learners will become proficient in the creation and utilization dashboards.",
     "imageUrl": "https://source.unsplash.com/JKUTrJ4vK00",
     "imageContentDesc": "Dashboard",
@@ -180,14 +180,14 @@
     "topicId": 14
   },
   {
-    "name": "Power BI Financial Reporting",
-    "description": "The Power BI Financial Reporting Specialization focuses on the role of financial accounting principles and processes in creating and reporting an organization’s financial statements. Learners who complete this specialization will be able to (1) use financial accounting principles to create and/or process an organization’s financial statements and (2) analyze financial statements to assess an organization’s financial position. The Financial Reporting Specialization includes multiple projects and practice activities, including analyses of statements and cases, which will be peer-reviewed.  In addition, the specialization includes one capstone course, which is comprised of a full case analysis of an actual company’s financial statements.",
+    "name": "Financial Reporting",
+    "description": "The Financial Reporting Specialization focuses on the role of financial accounting principles and processes in creating and reporting an organization’s financial statements. Learners who complete this specialization will be able to (1) use financial accounting principles to create and/or process an organization’s financial statements and (2) analyze financial statements to assess an organization’s financial position. The Financial Reporting Specialization includes multiple projects and practice activities, including analyses of statements and cases, which will be peer-reviewed.  In addition, the specialization includes one capstone course, which is comprised of a full case analysis of an actual company’s financial statements.",
     "imageUrl": "https://source.unsplash.com/Wb63zqJ5gnE",
     "imageContentDesc": "Die",
     "steps": 30,
     "step": 21,
     "instructorId": 2,
-    "topicId": 3
+    "topicId": 2
   },
   {
     "name": "Machine Learning Fundamentals",
@@ -258,6 +258,119 @@
     "step": 7,
     "instructorId": 8,
     "topicId": 11
+  },
+  {
+    "name": "Cyber Attacks Countermeasures",
+    "description": "This course provides learners with a baseline understanding of common cyber security threats, vulnerabilities, and risks. An overview of how basic cyber attacks are constructed and applied to real systems is also included. Examples include simple Unix kernel hacks, Internet worms, and Trojan horses in software utilities. Network attacks such as distributed denial of service (DDOS) and botnet- attacks are also described and illustrated using real examples from the past couple of decades. \n\nFamiliar analytic models are outlined such as the confidentiality/integrity/availability (CIA) security threat framework, and examples are used to illustrate how these different types of threats can degrade real assets. The course also includes an introduction to basic cyber security risk analysis, with an overview of how threat-asset matrices can be used to prioritize risk decisions. Threats, vulnerabilities, and attacks are examined and mapped in the context of system security engineering methodologies.",
+    "imageUrl": "https://source.unsplash.com/mT7lXZPjk7U",
+    "imageContentDesc": "Anonymous",
+    "steps": 35,
+    "step": 11,
+    "instructorId": 9,
+    "topicId": 4
+  },
+  {
+    "name": "Computational Biology",
+    "description": "When you complete this Specialization, you will learn how to answer many questions in modern biology that have become inseparable from the computational approaches used to solve them.  You will also obtain a toolkit of existing software resources built on these computational approaches and that are used by thousands of biologists every day in one of the fastest growing fields in science.\n\nAlthough this Specialization centers on computational topics, you do not need to know how to program in order to complete it. If you are interested in programming, we feature an \"Honors Track\" (called \"hacker track\" in previous runs of the course). The Honors Track allows you to implement the bioinformatics algorithms that you will encounter along the way in dozens of automatically graded coding challenges. By completing the Honors Track, you will be a bioinformatics software professional!",
+    "imageUrl": "https://source.unsplash.com/7wWRXewYCH4",
+      "imageContentDesc": "Microscope",
+    "steps": 45,
+    "step": 26,
+    "instructorId": 10,
+    "topicId": 1
+  },
+  {
+    "name": "Front-End Web Development with React",
+    "description": "This course explores Javascript based front-end application development, and in particular the React library (Currently Ver. 16.3). This course will use JavaScript ES6 for developing React application. You will also get an introduction to the use of Reactstrap for Bootstrap 4-based responsive UI design. You will be introduced to various aspects of React components. You will learn about React router and its use in developing single-page applications. You will also learn about designing controlled forms. You will be introduced to the Flux architecture and Redux. You will explore various aspects of Redux and use it to develop React-Redux powered applications. You will then learn to use Fetch for client-server communication and the use of REST API on the server side. A quick tour through React animation support and testing rounds off the course. You must have preferably completed the previous course in the specialization on Bootstrap 4, or have a working knowledge of Bootstrap 4 to be able to navigate this course. Also a good working knowledge of JavaScript, especially ES 5 is strongly recommended.",
+    "imageUrl": "https://source.unsplash.com/xkBaqlcqeb4",
+    "imageContentDesc": "React JS Logo",
+    "steps": 30,
+    "step": 2,
+    "instructorId": 23,
+    "topicId": 14
+  } ,
+  {
+    "name": "Database Applications in PHP",
+    "description": "In this course, we'll look at the object oriented patterns available in PHP. You'll learn how to connect to a MySQL using the Portable Data Objects (PDO) library and issue SQL commands in the the PHP language. We'll also look at how PHP uses cookies and manages session data. You'll learn how PHP avoids double posting data, how flash messages are implemented, and how to use a session to log in users in web applications. We'll then build the first 'complete' application that has multiple screens to Create, Read, Update and Delete (CRUD) our data. This brings all the previous concepts together and will form the basis for all later web applications.  It is assumed that learners have already taken the Building Web Applications course in this specialization.",
+    "imageUrl": "https://source.unsplash.com/2Rd-hwT2xQ0",
+    "imageContentDesc": "PHP Elephant",
+    "steps": 35,
+    "step": 8,
+    "instructorId": 31,
+    "topicId": 14
+  },
+  {
+    "name": "Project Planning",
+    "description": "Successful projects do not just happen. They are planned. Understanding what success for a specific project means is part of the plan. Take the opportunity to understand how you will measure success. Does your project require assistance or materials from the outside? If it does, will you know what type of contract will support your success?  When you understand these basics and you know how to identify the risks you face and how all of this information shapes your estimates, then you are ready to consider committing to a schedule and a budget. This course will take you through critical project planning basics so that when it is time for your schedule and budget, you are well informed.",
+    "imageUrl": "https://source.unsplash.com/zoCDWPuiRuA",
+    "imageContentDesc": "Notes",
+    "steps": 25,
+    "step": 9,
+    "instructorId": 22,
+    "topicId": 9
+  },
+  {
+    "name": "Social Media Marketing",
+    "description": "In a 2018 survey of businesses, Buffer found that only 29% had effective social media marketing programs. A recent survey of consumers by Tomoson found 92% of consumers trust recommendations from other people over brand content, 70% found consumer reviews to be their second most trusted source, 47% read blogs developed by influencers and experts to discover new trends and new ideas and 35% used blogs to discover new products and services.  Also, 20% of women who used social considered products promoted by bloggers they knew.   Today, businesses and consumers use social media to make their purchase decisions.\n\nCreated in 2014, this Specialization is updated every quarter to ensure you are receiving the most up-to-date training.  The Social Media Marketing Specialization is designed to achieve two objectives.  It gives you the social analytics tools, and training to help you become an influencer on social media.  The course also gives you the knowledge and resources to build a complete social media marketing strategy – from consumer insights to final justification metrics.  In each course, you will also receive special toolkits with timely information & when you pay for the Capstone, you receive a market planning toolkit.",
+    "imageUrl": "https://source.unsplash.com/OXrk8fG2aig",
+    "imageContentDesc": "Iphone",
+    "steps": 15,
+    "step": 9,
+    "instructorId": 24,
+    "topicId": 5
+  },
+  {
+    "name": "Publishing to the App Store",
+    "description": "Coders! If you’ve created an app and want to learn the process of getting the app into the App Store, this course is for you. This course covers both the Human Interface and App Store Review guidelines, then walks you through process of submitting an app from creating an Apple Developer Account all way to app submission. Long story short, this course will walk you step by step through the process of registering for a new developer account and submitting your app to the App Store.",
+    "imageUrl": "https://source.unsplash.com/QT3yOjx32rk",
+    "imageContentDesc": "Iphone",
+    "steps": 20,
+    "step": 1,
+    "instructorId": 32,
+    "topicId": 14
+  },
+  {
+    "name": "Tidyverse Data Wrangling",
+    "description": "This Specialization is intended for data scientists with some familiarity with the R programming language who are seeking to do data science using the Tidyverse family of packages. Through 5 courses, you will cover importing, wrangling, visualizing, and modeling data using the powerful Tidyverse framework. The Tidyverse packages provide a simple but powerful approach to data science which scales from the most basic analyses to massive data deployments. This course covers the entire life cycle of a data science project and presents specific tidy tools for each stage.",
+    "imageUrl": "https://source.unsplash.com/Wpnoqo2plFA",
+    "imageContentDesc": "Numbers",
+    "steps": 25,
+    "step": 12,
+    "instructorId": 35,
+    "topicId": 6
+  },
+  {
+    "name": "Penetration Testing",
+    "description": "You will learn about the different phases of penetration testing, how to gather data for your penetration test and popular penetration testing tools.  Furthermore, you will learn the phases of an incident response, important documentation to collect, and the components of an incident response policy and team.  Finally, you will learn key steps in the forensic process and important data to collect. This course is intended for anyone who wants to gain a basic understanding of Cybersecurity or as the fifth course in a series of courses to acquire the skills to work in the Cybersecurity field as a Cybersecurity Analyst. The completion of this course also makes you eligible to earn the Penetration Testing, Incident Response and Forensics IBM digital badge.",
+    "imageUrl": "https://source.unsplash.com/HAq24cfcdLg",
+    "imageContentDesc": "Output",
+    "steps": 40,
+    "step": 27,
+    "instructorId": 38,
+    "topicId": 4
+  },
+  {
+    "name": "R for Biologists",
+    "description": "In this specialisation, you’ll take a peek at what medical research is and how – and indeed why – you turn a vague notion into a scientifically testable hypothesis. You’ll learn about key statistical concepts like sampling, uncertainty, variation, missing values and distributions. Then you’ll get your hands dirty with analysing data sets covering some big public health challenges – fruit and vegetable consumption and cancer, risk factors for diabetes, and predictors of death following heart failure hospitalisation – using R, one of the most widely used and versatile free software packages around. In each course, you'll be introduced to key concepts and a data set to be used as a worked example throughout that course. Public health data are messy, with missing values and weird distributions all too common. The data you'll use are either real or simulated from real patient-level data sets (all anonymised and with usage permissions in place).",
+    "imageUrl": "https://source.unsplash.com/eTRwPn5QAwA",
+    "imageContentDesc": "Covid-19 Data",
+    "steps": 30,
+    "step": 5,
+    "instructorId": 40,
+    "topicId": 1
+  },
+  {
+    "name": "Numerical Methods",
+    "description": "Numerical Methods for Engineers covers the most important numerical methods that an engineer should know.  We derive  basic algorithms in root finding, matrix algebra, integration and interpolation, ordinary and partial differential equations.  We learn how to use MATLAB to solve numerical problems. Access to MATLAB online and the MATLAB grader is given to all students who enroll. The course targets anyone who aims at developing or using numerical methods applied to partial differential equations and is seeking a practical introduction at a basic level. The methodologies discussed are widely used in natural sciences,  engineering, as well as economics and other fields.",
+    "imageUrl": "https://source.unsplash.com/yQYQJaiypZE",
+    "imageContentDesc": "Pattern",
+    "steps": 40,
+    "step": 15,
+    "instructorId": 41,
+    "topicId": 12
   }
+
+
+
 
 ]
