@@ -20,6 +20,7 @@ data class GetOneCourseResponse(
 
     fun toModel() : CachedCourse =
         CachedCourse(id, name, topic.name, imageUrl, imageContentDesc, description, steps, step,
-        instructor = instructor.photoPath)
+        instructorName = instructor.fullName,
+        instructorPhotoPath = instructor.photoPath, favorite = true)
 
 }

@@ -43,7 +43,7 @@
                     app:layout_constraintDimensionRatio="4:3"
                     android:scaleType="centerCrop"
                     android:foreground="@drawable/learn_image_scrim"
-                    app:srcUrl="@{course.thumbUrl}"
+                    app:srcUrl="@{course.imageUrl}"
                     app:placeholder="@{@drawable/course_image_placeholder}"
                     app:loadListener="@{imageLoadListener}"
                     tools:src="@drawable/learn_image_scrim"
@@ -60,17 +60,10 @@
                     app:contentInsetStartWithNavigation="0dp"
                     app:menu="@menu/learn"
                     app:navigationIcon="@drawable/ic_back"
-                    app:marginTopSystemWindowInsets="@{true}">
-
-<!--                    <ImageView-->
-<!--                        android:layout_width="24dp"-->
-<!--                        android:layout_height="24dp"-->
-<!--                        app:srcCompat="@drawable/ic_logo"/>-->
-
-                </androidx.appcompat.widget.Toolbar>
+                    app:marginTopSystemWindowInsets="@{true}"/>
 
                 <ImageView
-                    android:id="@+id/course_instructor"
+                    android:id="@+id/course_instructor_photo"
                     android:layout_width="@dimen/image_view_instructor_width_detail"
                     android:layout_height="@dimen/image_view_instructor_height_detail"
                     app:layout_constraintStart_toStartOf="parent"
@@ -81,19 +74,37 @@
                     android:foreground="@drawable/avatar_outline"
                     android:importantForAccessibility="no"
                     app:circleCrop="@{true}"
-                    app:srcUrl="@{course.instructor}"/>
+                    app:srcUrl="@{course.instructorPhotoPath}"/>
+
+                <TextView
+                    android:id="@+id/course_instructor_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/course_instructor_photo"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    android:paddingTop="@dimen/margin_low"
+                    android:paddingHorizontal="@dimen/grid_2"
+                    android:gravity="center"
+                    android:text="@{course.instructorName}"
+                    android:textColor="?attr/colorSecondaryVariant"
+                    tools:text="John Doe"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textAllCaps="true"/>
 
                 <TextView
                     android:id="@+id/course_subject"
                     android:layout_width="0dp"
                     android:layout_height="wrap_content"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintTop_toBottomOf="@id/course_instructor"
+                    app:layout_constraintTop_toBottomOf="@id/course_instructor_name"
                     app:layout_constraintEnd_toEndOf="parent"
-                    android:padding="@dimen/grid_2"
+                    android:paddingTop="@dimen/margin_high"
+                    android:paddingBottom="@dimen/margin_low"
                     android:gravity="center"
                     android:text="@{course.subject}"
                     android:textColor="?attr/colorPrimary"
+                    android:textStyle="bold"
                     tools:text="Software Development"
                     android:textAppearance="?attr/textAppearanceBody2"
                     android:textAllCaps="true"/>

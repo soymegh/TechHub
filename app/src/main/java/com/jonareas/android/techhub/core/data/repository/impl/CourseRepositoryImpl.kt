@@ -15,14 +15,23 @@ class CourseRepositoryImpl @Inject constructor(private val dao : CourseDao, priv
         emit(dao.getAllCoursesByName(courseName))
     }
 
+    override suspend fun getFavoriteCoursesFlow(): Flow<List<CachedCourse>> = flow {
+        emit(dao.getFavorites())
+    }
+
+    override suspend fun setAsFavorite(id : Int) = dao.setAsFavorite(id)
+
     override suspend fun getRelatedCoursesFlow(courseId : Int): Flow<List<CachedCourse>> = flow {
         emit(dao.getRelatedCourses(courseId))
     }
 
     override suspend fun fetchCourses(): Flow<List<CachedCourse>> = flow {
-        val courses = service.getAllCourses().map { it.toModel() }
-        dao.delete()
-        dao.insert(*courses.toTypedArray())
+        val courses = service.getAllCourses()
+            .map { it.toModel() }
+            .toTypedArray()
+
+        dao.deleteAll()
+        dao.insert(*courses)
         emit(dao.getAll())
     }
 

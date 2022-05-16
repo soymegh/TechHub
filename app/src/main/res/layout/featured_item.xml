@@ -37,7 +37,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:placeholder="@{@drawable/course_image_placeholder}"
-            app:srcUrl="@{course.thumbUrl}" />
+            app:srcUrl="@{course.imageUrl}" />
 
         <ImageView
             android:id="@+id/course_add"
@@ -50,7 +50,7 @@
             tools:ignore="ImageContrastCheck" />
 
         <ImageView
-            android:id="@+id/course_instructor"
+            android:id="@+id/course_instructor_photo"
             android:layout_width="@dimen/image_view_instructor_width"
             android:layout_height="@dimen/image_view_instructor_height"
             android:foreground="@drawable/avatar_outline"
@@ -61,7 +61,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/course_image"
             app:placeholder="@{@drawable/ic_avatar_placeholder}"
-            app:srcUrl="@{course.instructor}"
+            app:srcUrl="@{course.instructorPhotoPath}"
  />
 
         <TextView
@@ -76,7 +76,7 @@
             android:textColor="?attr/colorPrimary"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/course_instructor" />
+            app:layout_constraintTop_toBottomOf="@id/course_instructor_photo" />
 
         <TextView
             android:id="@+id/course_name"

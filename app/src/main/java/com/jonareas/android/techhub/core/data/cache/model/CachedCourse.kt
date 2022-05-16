@@ -7,19 +7,19 @@ import com.jonareas.android.techhub.utils.RANDOM_GENERATOR
 import com.jonareas.android.techhub.utils.RANDOM_GENERATOR_SEED
 
 @Entity(tableName = "courses")
-data class CachedCourse(
+data class CachedCourse constructor(
     @PrimaryKey(autoGenerate = true)
-    val courseId: Int,
+    val courseId: Int = 0,
     val name: String,
     val subject: String,
-    val thumbUrl: String,
+    val imageUrl: String,
     val thumbContentDesc: String,
     val description: String = "",
     val steps: Int,
     val step: Int,
-    val status : Boolean = RANDOM_GENERATOR.nextBoolean(),
-    val gender : String = if(status) "men" else "women",
-    val instructor: String = "https://randomuser.me/api/portraits/${gender}/${courseId + 27}.jpg?seed=$RANDOM_GENERATOR_SEED"
+    val instructorName : String = "John Doe",
+    val instructorPhotoPath: String = "https://randomuser.me/api/portraits/men/${RANDOM_GENERATOR.nextInt(99)}.jpg?seed=$RANDOM_GENERATOR_SEED",
+    var favorite : Boolean = false
 ) : CachedEntity {
 
     companion object {

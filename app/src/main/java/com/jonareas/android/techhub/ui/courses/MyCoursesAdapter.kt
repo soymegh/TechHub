@@ -59,7 +59,7 @@ class MyCoursesAdapter : ListAdapter<CachedCourse, MyCoursesAdapter.MyCourseView
             binding.run {
                 this.course = course
                 Glide.with(courseImage)
-                    .load(course.thumbUrl)
+                    .load(course.imageUrl)
                     .placeholder(R.drawable.stroked_course_image_placeholder)
                     .transform(imageTransform)
                     .into(courseImage)

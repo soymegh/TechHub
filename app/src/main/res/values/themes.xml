@@ -61,7 +61,7 @@
         <item name="colorPrimary">@color/deep_orange</item>
         <item name="colorPrimaryVariant">@color/owl_blue_800</item>
         <item name="colorSecondary">@color/owl_yellow_500</item>
-        <item name="colorSecondaryVariant">@color/owl_yellow_400</item>
+        <item name="colorSecondaryVariant">@color/owl_pink_600</item>
     </style>
 
     <style name="Owl.Blue.Prussian">

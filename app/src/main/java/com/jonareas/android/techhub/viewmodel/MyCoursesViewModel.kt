@@ -25,7 +25,7 @@ class MyCoursesViewModel @Inject constructor(private val courseRepository: Cours
 
     private fun getAllCourses() {
         viewModelScope.launch(dispatchers.io) {
-            courseRepository.getAllFlow().collect { listOfCourses ->
+            courseRepository.getFavoriteCoursesFlow().collect { listOfCourses ->
                 _courses.postValue(listOfCourses)
             }
         }
