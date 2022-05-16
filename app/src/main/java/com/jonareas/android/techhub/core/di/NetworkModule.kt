@@ -1,5 +1,6 @@
 package com.jonareas.android.techhub.core.di
 
+import com.jonareas.android.techhub.core.data.api.service.CourseService
 import com.jonareas.android.techhub.core.data.api.service.LoginService
 import com.jonareas.android.techhub.core.data.api.utils.ApiConstants
 import dagger.Module
@@ -48,6 +49,12 @@ object NetworkModule {
     @Singleton
     fun provideLoginService(retrofit : Retrofit) : LoginService =
         retrofit.create(LoginService::class.java)
+
+    @Provides
+    @Singleton
+    fun provideCourseService(retrofit : Retrofit) : CourseService =
+        retrofit.create(CourseService::class.java)
+
 
 
 
