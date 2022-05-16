@@ -18,10 +18,10 @@ class ExploreCoursesViewModel @Inject constructor(
     private var _courses = MutableLiveData<List<CachedCourse>>()
     val courses = MediatorLiveData<List<CachedCourse>>()
 
-    private var _searchedCourses : LiveData<List<CachedCourse>>
+    private var _searchedCourses: LiveData<List<CachedCourse>>
     private var _searchTerm = MutableLiveData<String>()
 
-    private val debouncePeriod : Long = 500L
+    private val debouncePeriod: Long = 500L
 
 
     init {
@@ -41,15 +41,17 @@ class ExploreCoursesViewModel @Inject constructor(
 
     }
 
-    fun onSearchQuery(query : String) {
-            viewModelScope.launch {
-                if(query.isEmpty())
-                    getAllCourses()
-                else _searchTerm.value = query
-            }
+  fun onRefresh() = fetchAllCourses()
+
+    fun onSearchQuery(query: String) {
+        viewModelScope.launch {
+            if (query.isEmpty())
+                getAllCourses()
+            else _searchTerm.value = query
+        }
     }
 
-    private fun fetchCourseByQuery(query : String) : LiveData<List<CachedCourse>> {
+    private fun fetchCourseByQuery(query: String): LiveData<List<CachedCourse>> {
         val liveData = MutableLiveData<List<CachedCourse>>()
         viewModelScope.launch(dispatchers.io) {
 
@@ -60,6 +62,18 @@ class ExploreCoursesViewModel @Inject constructor(
         }
 
         return liveData
+    }
+
+    private fun fetchAllCourses() {
+        viewModelScope.launch(dispatchers.io) {
+            try {
+                courseRepository.fetchCourses().collectLatest { listOfCourses ->
+                    _courses.postValue(listOfCourses)
+                }
+            } catch (throwable: Throwable) {
+                throwable.printStackTrace()
+            }
+        }
     }
 
     private fun getAllCourses() {

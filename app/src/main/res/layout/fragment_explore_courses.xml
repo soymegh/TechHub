@@ -1,39 +1,40 @@
 <?xml version="1.0" encoding="utf-8"?>
-<layout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:targetApi="o"
-    tools:ignore="RtlSymmetry">
+    tools:ignore="RtlSymmetry"
+    tools:targetApi="o">
 
-    <androidx.coordinatorlayout.widget.CoordinatorLayout
-        android:id="@+id/root"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/colorPrimarySurface"
-        app:paddingTopSystemWindowInsets="@{true}"
-        app:paddingLeftSystemWindowInsets="@{true}"
-        app:paddingRightSystemWindowInsets="@{true}"
         android:theme="@style/Owl.Orange"
         android:transitionGroup="false"
+        app:paddingLeftSystemWindowInsets="@{true}"
+        app:paddingRightSystemWindowInsets="@{true}"
+        app:paddingTopSystemWindowInsets="@{true}"
         tools:context=".ui.featured.FeaturedFragment">
 
         <com.google.android.material.appbar.AppBarLayout
-            android:paddingTop="@dimen/margin_standard"
+            android:id="@+id/app_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimarySurface"
+            android:paddingTop="@dimen/margin_standard"
+            android:theme="@style/ThemeOverlay.Owl.Orange.Dark"
+            app:layout_constraintTop_toTopOf="parent"
             app:liftOnScroll="true"
-            app:liftOnScrollTargetViewId="@id/search_results"
-            android:theme="@style/ThemeOverlay.Owl.Orange.Dark">
+            app:liftOnScrollTargetViewId="@id/search_results">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                app:layout_scrollFlags="scroll|enterAlways|snap"
                 android:minHeight="?attr/actionBarSize"
                 app:contentInsetStartWithNavigation="0dp"
+                app:layout_scrollFlags="scroll|enterAlways|snap"
                 app:menu="@menu/account">
 
                 <androidx.appcompat.widget.SearchView
@@ -43,33 +44,40 @@
                     android:hint="@string/search_techHub"
                     android:imeOptions="actionSearch"
                     android:inputType="textCapWords"
-                    app:searchIcon="@drawable/ic_search"
                     android:lines="1"
-                    app:queryHint="@string/search_techHub"
                     android:minHeight="48dp"
                     android:selectAllOnFocus="true"
-                  />
+                    app:queryHint="@string/search_techHub"
+                    app:searchIcon="@drawable/ic_search" />
 
             </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.AppBarLayout>
 
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/featured_grid"
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
-            android:paddingHorizontal="@dimen/grid_1_5"
-            android:paddingBottom="@dimen/grid_1"
-            android:clipToPadding="false"
-            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-            app:spanCount="@integer/featured_grid_columns"
-            app:hasFixedSize="@{true}"
-            android:scrollbarStyle="outsideOverlay"
-            android:scrollbars="vertical"
-            tools:listitem="@layout/featured_item"/>
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/app_bar">
 
-    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/featured_grid"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:clipToPadding="false"
+                android:paddingHorizontal="@dimen/grid_1_5"
+                android:scrollbarStyle="outsideOverlay"
+                android:scrollbars="vertical"
+                app:hasFixedSize="@{true}"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+                app:spanCount="@integer/featured_grid_columns"
+                tools:listitem="@layout/featured_item" />
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </layout>

@@ -10,6 +10,9 @@ interface CourseDao : BaseDao<CachedCourse> {
     @Query("SELECT * FROM courses")
     fun getAll() : List<CachedCourse>
 
+    @Query("DELETE FROM courses")
+    fun delete()
+
     @Query("SELECT * FROM courses WHERE name LIKE '%' || :courseName || '%'")
     fun getAllCoursesByName(courseName : String) : List<CachedCourse>
 

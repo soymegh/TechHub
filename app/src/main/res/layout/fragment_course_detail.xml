@@ -16,7 +16,7 @@
     </data>
 
     <FrameLayout
-        android:id="@+id/root"
+        android:id="@+id/coordinator_layout"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:theme="@style/Owl.Orange"
@@ -122,7 +122,7 @@
                     android:padding="@dimen/grid_2"
                     android:gravity="center"
                     android:textAppearance="?attr/textAppearanceBody1"
-                    android:text="@string/course_desc"/>
+                    android:text="@{course.description}"/>
 
                 <View
                     android:id="@+id/divider"

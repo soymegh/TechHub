@@ -2,6 +2,7 @@ package com.jonareas.android.techhub.core.data.api.response
 
 import com.jonareas.android.techhub.core.data.api.model.ApiInstructor
 import com.jonareas.android.techhub.core.data.api.model.ApiTopic
+import com.jonareas.android.techhub.core.data.cache.model.CachedCourse
 import kotlinx.serialization.Serializable
 
 @Serializable
@@ -15,4 +16,10 @@ data class GetOneCourseResponse(
     val steps: Int,
     val instructor: ApiInstructor,
     val topic: ApiTopic
-)
+) {
+
+    fun toModel() : CachedCourse =
+        CachedCourse(id, name, topic.name, imageUrl, imageContentDesc, description, steps, step,
+        instructor = instructor.photoPath)
+
+}

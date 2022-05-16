@@ -87,6 +87,10 @@ class ExploreCoursesFragment : Fragment(), OnQueryTextListener {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        binding.swipeRefreshLayout.setOnRefreshListener {
+            viewModel.onRefresh()
+            binding.swipeRefreshLayout.isRefreshing = false
+        }
     }
 
 
