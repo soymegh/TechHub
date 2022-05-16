@@ -21,8 +21,6 @@ class ExploreCoursesViewModel @Inject constructor(
     private var _searchedCourses: LiveData<List<CachedCourse>>
     private var _searchTerm = MutableLiveData<String>()
 
-    private val debouncePeriod: Long = 500L
-
 
     init {
         _searchedCourses = Transformations.switchMap(_searchTerm) { courseQuery ->

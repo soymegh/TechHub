@@ -10,9 +10,9 @@ import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
 import com.jonareas.android.techhub.R
+import com.jonareas.android.techhub.animation.transitions.MaterialContainerTransition
 import com.jonareas.android.techhub.databinding.FragmentCourseDetailBinding
 import com.jonareas.android.techhub.ui.explore.CourseViewClick
-import com.jonareas.android.techhub.animation.transitions.MaterialContainerTransition
 import com.jonareas.android.techhub.viewmodel.CourseDetailViewModel
 import dagger.hilt.android.AndroidEntryPoint
 import java.util.concurrent.TimeUnit
@@ -44,7 +44,7 @@ class CourseDetailFragment : Fragment() {
         savedInstanceState: Bundle?,
     ): View {
         val courseId = navArgs.courseId
-        viewModel.getCourseById(courseId)
+        viewModel.onRetrieveCourseId(courseId)
         viewModel
         _binding = FragmentCourseDetailBinding.inflate(inflater, container, false).apply {
             lifecycleOwner = viewLifecycleOwner

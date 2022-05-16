@@ -1,13 +1,13 @@
 [
   {
-    "name": "Android Basics in Kotlin",
-    "description": "Welcome to Android Basics in Kotlin! In this course, you'll learn the basics of building Android apps with the Kotlin programming language. Along the way, you'll develop a collection of apps to start your journey as an Android developer.",
-    "imageUrl": "https://source.unsplash.com/lqcvMiBABHw",
-    "imageContentDesc": "Kotlin Code",
-    "steps": 15,
-    "step": 1,
-    "instructorId": 18,
-    "topicId": 14
+    "name": "Linear Algebra",
+    "description": "This course is all about matrices, and concisely covers the linear algebra that an engineer should know.   The mathematics in this course is presented at the level of an advanced high school student, but typically students should take this course after completing a university-level single variable calculus course.  There are no derivatives or integrals in this course, but students are expected to have attained a sufficient level of mathematical maturity.  Nevertheless, anyone who wants to learn the basics of matrix algebra is welcome to join.",
+    "imageUrl": "https://source.unsplash.com/05A-kdOH6Hw",
+    "imageContentDesc": "System of Linear Equations",
+    "steps": 40,
+    "step": 32,
+    "instructorId": 21,
+    "topicId": 12
   },
   {
     "name": "Advanced Android",
@@ -46,7 +46,7 @@
     "imageContentDesc": "Stock Trends",
     "steps": 30,
     "step": 28,
-    "instructorId": 23,
+    "instructorId": 4,
     "topicId": 7
   },
   {
@@ -150,16 +150,6 @@
     "topicId": 12
   },
   {
-    "name": "Linear Algebra",
-    "description": "This course is all about matrices, and concisely covers the linear algebra that an engineer should know.   The mathematics in this course is presented at the level of an advanced high school student, but typically students should take this course after completing a university-level single variable calculus course.  There are no derivatives or integrals in this course, but students are expected to have attained a sufficient level of mathematical maturity.  Nevertheless, anyone who wants to learn the basics of matrix algebra is welcome to join.",
-    "imageUrl": "https://source.unsplash.com/05A-kdOH6Hw",
-    "imageContentDesc": "System of Linear Equations",
-    "steps": 40,
-    "step": 32,
-    "instructorId": 21,
-    "topicId": 12
-  },
-  {
     "name": "Power BI Reporting",
     "description": "New Power BI users will begin the course by gaining a conceptual understanding of the Power BI desktop application and the Power BI service. Learners will explore the Power BI interface while learning how to manage pages and understand the basics of visualizations. Learners will engage in numerous hands-on experiences to discover how to import, connect, clean, transform, and model their own data in the Power BI desktop application. Learners will investigate reports, learn about workspaces, and practice viewing, creating, and publishing reports to the Power BI service. Finally, learners will become proficient in the creation and utilization dashboards.",
     "imageUrl": "https://source.unsplash.com/JKUTrJ4vK00",
@@ -168,6 +158,106 @@
     "step": 14,
     "instructorId": 37,
     "topicId": 2
+  },
+  {
+    "name": "Multivariate Probability",
+    "description": "This courses will cover basic concepts in multivariate probability models, i.e., probability models\ninvolving multiple random variables. We will begin by discussing the important concepts of independence\nand conditional independence and look at the general framework of graphical models. We will then look\nat specific examples of models: for joint distributions we will look at the naive Bayes probability model\nand Markov models, and for joint densities we will look at the multivariate Gaussian model. Note that the\nideas we discuss below are applicable equally well to both discrete-valued and continuous variables (and\ntheir combinations): in our examples we will tend to focus on one or the other and it should be clear how to\ngeneralize.",
+    "imageUrl": "https://source.unsplash.com/yG9pCqSOrAg",
+    "imageContentDesc": "Die",
+    "steps": 30,
+    "step": 21,
+    "instructorId": 3,
+    "topicId": 15
+  },
+  {
+    "name": "Android Basics in Kotlin",
+    "description": "Welcome to Android Basics in Kotlin! In this course, you'll learn the basics of building Android apps with the Kotlin programming language. Along the way, you'll develop a collection of apps to start your journey as an Android developer.",
+    "imageUrl": "https://source.unsplash.com/lqcvMiBABHw",
+    "imageContentDesc": "Kotlin Code",
+    "steps": 15,
+    "step": 1,
+    "instructorId": 18,
+    "topicId": 14
+  },
+  {
+    "name": "Power BI Financial Reporting",
+    "description": "The Power BI Financial Reporting Specialization focuses on the role of financial accounting principles and processes in creating and reporting an organization’s financial statements. Learners who complete this specialization will be able to (1) use financial accounting principles to create and/or process an organization’s financial statements and (2) analyze financial statements to assess an organization’s financial position. The Financial Reporting Specialization includes multiple projects and practice activities, including analyses of statements and cases, which will be peer-reviewed.  In addition, the specialization includes one capstone course, which is comprised of a full case analysis of an actual company’s financial statements.",
+    "imageUrl": "https://source.unsplash.com/Wb63zqJ5gnE",
+    "imageContentDesc": "Die",
+    "steps": 30,
+    "step": 21,
+    "instructorId": 2,
+    "topicId": 3
+  },
+  {
+    "name": "Machine Learning Fundamentals",
+    "description": "Machine learning is the science of getting computers to act without being explicitly programmed. In the past decade, machine learning has given us self-driving cars, practical speech recognition, effective web search, and a vastly improved understanding of the human genome. Machine learning is so pervasive today that you probably use it dozens of times a day without knowing it. Many researchers also think it is the best way to make progress towards human-level AI. In this class, you will learn about the most effective machine learning techniques, and gain practice implementing them and getting them to work for yourself. More importantly, you'll learn about not only the theoretical underpinnings of learning, but also gain the practical know-how needed to quickly and powerfully apply these techniques to new problems. Finally, you'll learn about some of Silicon Valley's best practices in innovation as it pertains to machine learning and AI.",
+    "imageUrl": "https://source.unsplash.com/zwd435-ewb4",
+    "imageContentDesc": "Robot",
+    "steps": 50,
+    "step": 8,
+    "instructorId": 39,
+    "topicId": 6
+  },
+  {
+    "name": "Adobe Suite",
+    "description": "Graphic design is all around us, in a myriad of forms, both on screen and in print, yet it is always made up of images and words to create a communication goal. This four-course sequence exposes students to the fundamental skills required to make sophisticated graphic design: process, historical context, and communication through image-making and typography. The sequence is completed by a capstone project that applies the skills of each course and peer feedback in a finished branding project suitable for a professional portfolio using the Adobe Suite Software tools.",
+    "imageUrl": "https://source.unsplash.com/v9vII5gV8Lw",
+    "imageContentDesc": "Adobe Software",
+    "steps": 25,
+    "step": 24,
+    "instructorId": 11,
+    "topicId": 11
+  },
+  {
+    "name": "Negotiation Skills",
+    "description": "This specialization is intended for managers - from business, public administration, international organizations or NGOs - who want to go beyond intuition and acquire proven tools to help them achieve greater success in negotiation. At the end of the Specialization, the Capstone project will help learners put everything together: how to analyze situation negotiations, how to run a business negotiation in a tense environment - and, if need be, how to settle such a conflict as a mediator.",
+    "imageUrl": "https://source.unsplash.com/rRWiVQzLm7k",
+    "imageContentDesc": "Adobe Software",
+    "steps": 20,
+    "step": 19,
+    "instructorId": 5,
+    "topicId": 9
+  },
+  {
+    "name": "Publish to the Google Play Store",
+    "description": "Learn how to build a release version of your app and upload it to the Google Play Store for testing and final release to end users. Also learn how to create a new developer account, how to use the new Google Play Console and familiarize yourself with the recent Google Play policies. This course is for Android developers who want to publish their first Android app to the Google Play Store. This course expects you to be familiar with Android Studio and basics of Kotlin programming language. You will also need a Google developer account to upload your app to the play store which currently has a 25 USD fee.",
+    "imageUrl": "https://source.unsplash.com/NHhxAv5zVz4",
+    "imageContentDesc": "Android Logo",
+    "steps": 35,
+    "step": 21,
+    "instructorId": 17,
+    "topicId": 14
+  },
+  {
+    "name": "Developing BLE Applications for iOS",
+    "description": "At the core of developing iOS applications for Bluetooth peripherals is a thorough knowledge of Apple’s Core Bluetooth framework. This framework makes it easy to write these apps without worrying about the low-level details of the Bluetooth protocol stack. In this course, Building iOS BLE Applications with Core Bluetooth, you will create iOS apps that can communicate with a variety of devices using Bluetooth wireless technology. You will begin by covering the most important concepts and terminology you need when developing with Bluetooth, like Bluetooth Low Energy (BLE), central and peripheral roles. Next, you will learn how to discover peripherals and interact with its data. Finally, you will then work on building your own peripheral and share its data. When you’re finished with this course, you will have laid the groundwork for building powerful applications that leverage BLE technology.",
+    "imageUrl": "https://source.unsplash.com/OCfHTaB5THQ",
+    "imageContentDesc": "Core Bluetooth for iOS",
+    "steps": 25,
+    "step": 24,
+    "instructorId": 16,
+    "topicId": 14
+  },
+  {
+    "name": "Introduction to Game Design",
+    "description": "Welcome! This course is an introduction to the primary concepts of gaming, and an exploration of how these basic concepts affect the way gamers interact with our games. In this course you will understand what defines a “game” and the mechanics and rules behind different types of games. Through four linked assignments you'll learn ways to create and describe a game concept, and specifically what makes a compelling game. This course focuses on the conceptual underpinnings of games, and all assignments can be completed with a pencil and paper – no previous programming knowledge is required.",
+    "imageUrl": "https://source.unsplash.com/blYe0BupDuQ",
+    "imageContentDesc": "Pacman",
+    "steps": 20,
+    "step": 4,
+    "instructorId": 6,
+    "topicId": 10
+  },
+  {
+    "name": "Fundamentals of Graphic Design",
+    "description": "Graphic Design is all around us! Words and pictures—the building blocks of graphic design—are the elements that carry the majority of the content in both the digital world and the printed world. As graphic design becomes more visible and prevalent in our lives, graphic design as a practice becomes more important in our culture.\n\nThrough visual examples, this course will teach you the fundamental principles of graphic design: imagemaking, typography, composition, working with color and shape... foundational skills that are common in all areas of graphic design practice. I don't just want you to watch a video of someone talking about design, I want you to MAKE design! If you want to be a designer you have to be a maker and a communicator, so this course will offer you lots of opportunities to get your hands dirty with exercises and with more practical projects.",
+    "imageUrl": "https://source.unsplash.com/RnCPiXixooY",
+    "imageContentDesc": "Hallway",
+    "steps": 20,
+    "step": 7,
+    "instructorId": 8,
+    "topicId": 11
   }
 
 ]

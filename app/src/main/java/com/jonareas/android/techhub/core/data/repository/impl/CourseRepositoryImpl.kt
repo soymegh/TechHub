@@ -15,8 +15,8 @@ class CourseRepositoryImpl @Inject constructor(private val dao : CourseDao, priv
         emit(dao.getAllCoursesByName(courseName))
     }
 
-    override suspend fun getRelatedCoursesFlow(): Flow<List<CachedCourse>> = flow {
-        emit(dao.getRelatedCourses())
+    override suspend fun getRelatedCoursesFlow(courseId : Int): Flow<List<CachedCourse>> = flow {
+        emit(dao.getRelatedCourses(courseId))
     }
 
     override suspend fun fetchCourses(): Flow<List<CachedCourse>> = flow {

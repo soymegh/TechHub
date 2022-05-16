@@ -23,15 +23,16 @@ class CourseDetailViewModel @Inject constructor(
 
 
     private var _relatedCourses = MutableLiveData<List<CachedCourse>>()
-    val relatedCourses : LiveData<List<CachedCourse>> = _relatedCourses
+    val relatedCourses: LiveData<List<CachedCourse>> = _relatedCourses
 
-    init {
-        getRelatedCourses()
+    fun onRetrieveCourseId(id: Int) {
+        getCourseById(id)
+        getRelatedCourses(id)
     }
 
-    private fun getRelatedCourses() {
+    private fun getRelatedCourses(id: Int) {
         viewModelScope.launch(dispatchers.io) {
-            courseRepository.getRelatedCoursesFlow().collectLatest { listOfCourses ->
+            courseRepository.getRelatedCoursesFlow(id).collectLatest { listOfCourses ->
                 _relatedCourses.postValue(listOfCourses)
             }
 
@@ -39,11 +40,12 @@ class CourseDetailViewModel @Inject constructor(
     }
 
 
-    internal fun getCourseById(id : Int) {
+    private fun getCourseById(id: Int) {
         viewModelScope.launch(dispatchers.io) {
             courseRepository.getByIdFlow(id).collect { course ->
                 _course.postValue(course)
             }
+            getRelatedCourses(id)
         }
     }
 
