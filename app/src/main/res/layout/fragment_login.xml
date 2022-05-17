@@ -14,7 +14,7 @@
         android:layout_height="match_parent"
         android:background="?attr/colorPrimarySurface"
         android:clipChildren="false"
-        android:theme="@style/Owl.Pink.Variant"
+        android:theme="@style/TechHub.Pink.Variant"
         app:paddingTopSystemWindowInsets="@{true}"
         tools:context=".ui.login.OnboardingFragment"
         tools:targetApi="o">

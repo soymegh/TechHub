@@ -1,61 +1,74 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
-    <style name="Owl.Light">
-        <item name="colorPrimary">@color/anti_flash_white</item>
-        <item name="colorPrimaryVariant">@color/anti_flash_white</item>
-        <item name="colorSecondary">@color/anti_flash_white</item>
-        <item name="colorSecondaryVariant">@color/matte_black</item>
+    <style name="TechHub.Light">
+        <item name="colorPrimary">@color/tech_anti_flash_white</item>
+        <item name="colorPrimaryVariant">@color/tech_anti_flash_white</item>
+        <item name="colorSecondary">@color/tech_anti_flash_white</item>
+        <item name="colorSecondaryVariant">@color/tech_matte_black</item>
         <item name="colorSurface">@color/dark_blue_grey</item>
     </style>
 
-    <style name="Owl.Yellow">
-        <item name="colorPrimary">@color/owl_yellow_200</item>
-        <item name="colorSecondary">@color/owl_blue_200</item>
-        <item name="colorSurface">@color/owl_yellow_dark_primary</item>
+
+    <style name="TechHub.Pink.Rose">
+        <item name="colorPrimary">@color/tech_anti_flash_white</item>
+        <item name="colorPrimaryVariant">@color/tech_anti_flash_white</item>
+        <item name="colorSecondary">@color/tech_anti_flash_white</item>
+        <item name="colorSecondaryVariant">@color/tech_matte_black</item>
+        <item name="colorSurface">@color/dark_blue_grey</item>
+
     </style>
 
-    <style name="Owl.Orange">
-        <item name="colorPrimary">@color/deep_orange</item>
-        <item name="colorPrimaryVariant">@color/owl_blue_800</item>
-        <item name="colorSecondary">@color/owl_yellow_500</item>
-        <item name="colorSecondaryVariant">@color/owl_yellow_400</item>
+
+
+
+    <style name="TechHub.Yellow">
+        <item name="colorPrimary">@color/tech_yellow_200</item>
+        <item name="colorSecondary">@color/tech_blue_200</item>
+        <item name="colorSurface">@color/tech_yellow_dark_primary</item>
+    </style>
+
+    <style name="TechHub.Orange">
+        <item name="colorPrimary">@color/tech_deep_orange</item>
+        <item name="colorPrimaryVariant">@color/tech_blue_800</item>
+        <item name="colorSecondary">@color/tech_yellow_500</item>
+        <item name="colorSecondaryVariant">@color/tech_yellow_400</item>
         <item name="colorPrimarySurface">@color/dark_blue_grey</item>
     </style>
 
-    <style name="ThemeOverlay.Owl.Orange.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dark">
-        <item name="colorPrimary">@color/deep_orange</item>
-        <item name="colorPrimaryVariant">@color/owl_blue_800</item>
-        <item name="colorSecondary">@color/owl_yellow_500</item>
-        <item name="colorSecondaryVariant">@color/owl_yellow_400</item>
+    <style name="ThemeOverlay.TechHub.Orange.Dark" parent="@style/ThemeOverlay.MaterialComponents.Dark">
+        <item name="colorPrimary">@color/tech_deep_orange</item>
+        <item name="colorPrimaryVariant">@color/tech_blue_800</item>
+        <item name="colorSecondary">@color/tech_yellow_500</item>
+        <item name="colorSecondaryVariant">@color/tech_yellow_400</item>
         <item name="colorOnPrimary">#fff</item>
         <item name="colorPrimarySurface">@color/dark_blue_grey</item>
     </style>
 
-    <style name="Owl.Blue">
-        <item name="colorPrimary">@color/deep_orange</item>
-        <item name="colorSecondary">@color/deep_orange</item>
-        <item name="colorSurface">@color/matte_black</item>
+    <style name="TechHub.Blue">
+        <item name="colorPrimary">@color/tech_deep_orange</item>
+        <item name="colorSecondary">@color/tech_deep_orange</item>
+        <item name="colorSurface">@color/tech_matte_black</item>
         <item name="colorOnPrimary">@color/white</item>
         <item name="colorPrimarySurface">@color/dark_blue_grey</item>
     </style>
 
-    <style name="ThemeOverlay.Owl.Blue" parent="@style/ThemeOverlay.MaterialComponents.Dark">
+    <style name="ThemeOverlay.TechHub.Blue" parent="@style/ThemeOverlay.MaterialComponents.Dark">
         <item name="colorPrimary">@color/light_orange</item>
-        <item name="colorSecondary">@color/owl_yellow_200</item>
-        <item name="colorSurface">@color/matte_black</item>
+        <item name="colorSecondary">@color/tech_yellow_200</item>
+        <item name="colorSurface">@color/tech_matte_black</item>
     </style>
 
-    <style name="ThemeOverlay.Owl.Blue.Dark"/>
+    <style name="ThemeOverlay.TechHub.Blue.Dark"/>
 
-    <style name="Owl.Pink">
-        <item name="colorPrimary">@color/owl_pink_200</item>
-        <item name="colorSecondary">@color/owl_pink_200</item>
-        <item name="colorSurface">@color/owl_pink_dark_primary</item>
+    <style name="TechHub.Pink">
+        <item name="colorPrimary">@color/tech_pink_200</item>
+        <item name="colorSecondary">@color/tech_pink_200</item>
+        <item name="colorSurface">@color/tech_pink_dark_primary</item>
     </style>
 
-    <style name="Owl.Pink.Variant" parent="Theme.Material3.Dark.NoActionBar">
-        <item name="colorPrimary">@color/owl_pink_500</item>
-        <item name="colorSecondary">@color/owl_yellow_400</item>
-        <item name="colorPrimaryVariant">@color/owl_pink_600</item>
+    <style name="TechHub.Pink.Variant" parent="Theme.Material3.Dark.NoActionBar">
+        <item name="colorPrimary">@color/tech_pink_500</item>
+        <item name="colorSecondary">@color/tech_yellow_400</item>
+        <item name="colorPrimaryVariant">@color/tech_pink_600</item>
         <item name="colorOnPrimary">#fff</item>
         <item name="colorOnSurface">#fff</item>
         <item name="colorPrimaryContainer">@color/dark_blue_grey</item>

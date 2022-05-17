@@ -4,6 +4,6 @@
   <item
       android:state_activated="true"
       android:alpha="0.80"
-      android:color="@color/owl_pink_500"/>
+      android:color="@color/tech_pink_500"/>
 
 </selector>

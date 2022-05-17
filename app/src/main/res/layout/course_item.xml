@@ -22,7 +22,7 @@
         android:layout_marginStart="32dp"
         android:onClick="@{(v) -> clickHandler.onClick(v, course.courseId)}"
         android:transitionName="@{course.name}"
-        android:theme="@style/ThemeOverlay.Owl.TransitionShapeAppearance.Small">
+        android:theme="@style/ThemeOverlay.TechHub.TransitionShapeAppearance.Small">
 
         <View
             android:id="@+id/background"

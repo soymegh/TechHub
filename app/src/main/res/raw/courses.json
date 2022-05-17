@@ -1,13 +1,13 @@
 [
   {
-    "name": "Linear Algebra",
-    "description": "This course is all about matrices, and concisely covers the linear algebra that an engineer should know.   The mathematics in this course is presented at the level of an advanced high school student, but typically students should take this course after completing a university-level single variable calculus course.  There are no derivatives or integrals in this course, but students are expected to have attained a sufficient level of mathematical maturity.  Nevertheless, anyone who wants to learn the basics of matrix algebra is welcome to join.",
-    "imageUrl": "https://source.unsplash.com/05A-kdOH6Hw",
-    "imageContentDesc": "System of Linear Equations",
-    "steps": 40,
-    "step": 32,
-    "instructorId": 21,
-    "topicId": 12
+    "name": "ARKit for iOS",
+    "description": "This course is for anyone who wants to take their skills to the next level. ARKit is a new technology and companies will be jumping on it to create their future app experiences. Augmented Reality Using ARKit can also help you to earn higher salary since now you know how to write a complete app which deals with placing virtual objects in the real world. Focus on the fundamentals of ARKit using Swift and Xcode to build beautiful and performant augmented reality scenes. Learn to make your AR experience more dynamic and responsive by integrating proper lighting and physics using the Swift programming language.",
+    "imageUrl": "https://source.unsplash.com/qDG7XKJLKbs",
+    "imageContentDesc": "Augmented Reality Ball",
+    "steps": 30,
+    "step": 11,
+    "instructorId": 29,
+    "topicId": 10
   },
   {
     "name": "Advanced Android",
@@ -20,6 +20,16 @@
     "topicId": 14
   },
   {
+    "name": "Linear Algebra",
+    "description": "This course is all about matrices, and concisely covers the linear algebra that an engineer should know.   The mathematics in this course is presented at the level of an advanced high school student, but typically students should take this course after completing a university-level single variable calculus course.  There are no derivatives or integrals in this course, but students are expected to have attained a sufficient level of mathematical maturity.  Nevertheless, anyone who wants to learn the basics of matrix algebra is welcome to join.",
+    "imageUrl": "https://source.unsplash.com/05A-kdOH6Hw",
+    "imageContentDesc": "System of Linear Equations",
+    "steps": 40,
+    "step": 32,
+    "instructorId": 21,
+    "topicId": 12
+  },
+  {
     "name": "CI/CD with Gitlab",
     "description": "This course explains what Continuous Integration/Continuous Deployment (CI/CD) pipelines are and what value they bring to the software development lifecycle. It also outlines the architecture behind GitLab's CI/CD pipelines and explains how to set up basic CI/CD pipelines in your own projects. Finally, it touches on a handful of specific CI/CD pipeline use cases, including pushing your app to a Docker Container registry and using one of GitLab's security scanners.",
     "imageUrl": "https://source.unsplash.com/ZV_64LdGoao",
@@ -28,16 +38,6 @@
     "step": 11,
     "instructorId": 36,
     "topicId": 14
-  },
-  {
-    "name": "Virtual Reality in Unity",
-    "description": "In this Unity sponsored course, you will learn how to design and develop your own Virtual Reality (VR) applications. You will create prototypes, attempt challenges, and complete quizzes to build and solidify your skill set. At the same time, you will be guided through creating your own unique VR project from start to finish, beginning with a blank design document and ending with a fully functional project.",
-    "imageUrl": "https://source.unsplash.com/npTT9rD8wd4",
-    "imageContentDesc": "Virtual Reality Headset",
-    "steps": 40,
-    "step": 9,
-    "instructorId": 29,
-    "topicId": 10
   },
   {
     "name": "R Market Analysis",
@@ -148,6 +148,16 @@
     "step": 20,
     "instructorId": 21,
     "topicId": 12
+  },
+  {
+    "name": "Virtual Reality in Unity",
+    "description": "In this Unity sponsored course, you will learn how to design and develop your own Virtual Reality (VR) applications. You will create prototypes, attempt challenges, and complete quizzes to build and solidify your skill set. At the same time, you will be guided through creating your own unique VR project from start to finish, beginning with a blank design document and ending with a fully functional project.",
+    "imageUrl": "https://source.unsplash.com/npTT9rD8wd4",
+    "imageContentDesc": "Virtual Reality Headset",
+    "steps": 40,
+    "step": 9,
+    "instructorId": 29,
+    "topicId": 10
   },
   {
     "name": "Power BI",
@@ -368,6 +378,26 @@
     "step": 15,
     "instructorId": 41,
     "topicId": 12
+  },
+  {
+    "name": "Linux Security",
+    "description": "Whether you are accessing a bank website, Netflix or your home router, chances are that your computer is interacting with a Linux system.  The world runs on Linux.  In this course, we will dive into how Linux works from an enterprise perspective.  \n\nIn week 1 we will look at what Linux is used for in the enterprise.  By the end of week 1, you will be able to differentiate between different versions of Linux and understand how they are used in an enterprise environment.  In week 2, we will explore how Linux systems are configured.  By the end of week 2, you will be able to demonstrate different Linux commands and how they are used.  You will also be able to interact with a Linux system.  In week 3, we will explore Linux authentication mechanisms and how to add users and user controls to a Linux system.  By the end of week 3, you should be able to demonstrate how to appropriately add users to a Linux machine and secure them.  In week 4, we will explore how to harden a Linux system.  By the end of week 4, you should be able to classify different technologies to secure Linux and differentiate access control methods for Linux applications.",
+    "imageUrl": "https://source.unsplash.com/M5tzZtFCOfs",
+    "imageContentDesc": "Network Cables",
+    "steps": 40,
+    "step": 10,
+    "instructorId": 38,
+    "topicId": 4
+  },
+  {
+    "name": "The Oculus SDK",
+    "description": "If there’s one thing that will change the face gaming, it’s virtual reality. In the past couple of years, VR has exploded into mainstream with new headsets being announced on almost a weekly basis. In this video series, you’ll learn how to create a virtual reality enabled world by utilizing both Unity engine and the Oculus Rift SDK. Finally, you will put your skills into practice by building your very first virtual reality game, a shooting range featuring interactive targets, laser sights and a head tracking weapon. Course resources including 3D models, textures and audio files have also been provided for you.",
+    "imageUrl": "https://source.unsplash.com/Zf0mPf4lG-U",
+    "imageContentDesc": "Oculus VR Headset",
+    "steps": 30,
+    "step": 23,
+    "instructorId": 29,
+    "topicId": 10
   }
 
 

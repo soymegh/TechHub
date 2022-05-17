@@ -13,7 +13,7 @@
         app:paddingTopSystemWindowInsets="@{true}"
         app:paddingLeftSystemWindowInsets="@{true}"
         app:paddingRightSystemWindowInsets="@{true}"
-        android:theme="@style/Owl.Orange"
+        android:theme="@style/TechHub.Orange"
         tools:context=".ui.mycourses.MyCoursesFragment">
 
         <com.google.android.material.appbar.AppBarLayout
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             app:liftOnScroll="true"
             app:liftOnScrollTargetViewId="@id/featured_grid"
-            android:theme="@style/ThemeOverlay.Owl.Orange.Dark">
+            android:theme="@style/ThemeOverlay.TechHub.Orange.Dark">
 
             <androidx.appcompat.widget.Toolbar
                 android:id="@+id/toolbar"

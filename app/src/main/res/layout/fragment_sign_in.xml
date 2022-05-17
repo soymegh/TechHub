@@ -8,7 +8,7 @@
         android:layout_height="match_parent"
         android:background="?attr/colorPrimarySurface"
         android:orientation="vertical"
-        android:theme="@style/Owl.Light"
+        android:theme="@style/TechHub.Pink.Rose"
         tools:context=".ui.mycourses.MyCoursesFragment">
 
         <androidx.appcompat.widget.Toolbar

@@ -8,7 +8,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/colorPrimarySurface"
-        android:theme="@style/Owl.Blue"
+        android:theme="@style/TechHub.Blue"
         app:paddingTopSystemWindowInsets="@{true}"
         app:paddingLeftSystemWindowInsets="@{true}"
         app:paddingRightSystemWindowInsets="@{true}"
@@ -21,7 +21,7 @@
                     android:background="?attr/colorPrimarySurface"
                     app:liftOnScroll="true"
                     app:liftOnScrollTargetViewId="@id/featured_grid"
-                    android:theme="@style/Owl.Blue">
+                    android:theme="@style/TechHub.Blue">
 
                     <androidx.appcompat.widget.Toolbar
                         android:id="@+id/toolbar"

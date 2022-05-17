@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="?attr/colorPrimarySurface"
-        android:theme="@style/Owl.Orange"
+        android:theme="@style/TechHub.Orange"
         android:transitionGroup="false"
         app:paddingLeftSystemWindowInsets="@{true}"
         app:paddingRightSystemWindowInsets="@{true}"
@@ -23,7 +23,7 @@
             android:layout_height="wrap_content"
             android:background="?attr/colorPrimarySurface"
             android:paddingTop="@dimen/margin_standard"
-            android:theme="@style/ThemeOverlay.Owl.Orange.Dark"
+            android:theme="@style/ThemeOverlay.TechHub.Orange.Dark"
             app:layout_constraintTop_toTopOf="parent"
             app:liftOnScroll="true"
             app:liftOnScrollTargetViewId="@id/search_results">
